@@ -3,6 +3,6 @@
 
 This is my simple startpage.
 
-![](./image.png)
+[Live preview of site](https://senpai-10.github.io/startpage/)
 
-[Live preview of site](https://voxie12.github.io/)
+![](./image.png)
