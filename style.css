@@ -1,50 +1,50 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap');
 
 html {
-  background-color: #181717;
-  align-items: center;
-  color: #ebdbb2;
-  display: flex;
-  font-family: 'Ubuntu Mono', monospace;
-  font-size: 25px;
-  height: 100%;
-  justify-content: center;
-  margin: 0;
+    background-color: #181717;
+    align-items: center;
+    color: #ebdbb2;
+    display: flex;
+    font-family: 'Ubuntu Mono', monospace;
+    font-size: 25px;
+    height: 100%;
+    justify-content: center;
+    margin: 0;
 }
 
 body {
-  display: flex;
-  margin: 1em;
-  padding: 1em;
+    display: flex;
+    margin: 1em;
+    padding: 1em;
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
+    color: inherit;
+    text-decoration: none;
 }
 
 a:focus,
 a:hover {
-  color: #a9b1d6;
+    color: #a9b1d6;
 }
 
 nav {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  margin: 0 1em;
-  min-width: 24em;
-  padding: 1em 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0 1em;
+    min-width: 24em;
+    padding: 1em 0;
 }
 
 ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  white-space: nowrap;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
 }
 
 li:first-child {
-  font-weight: bold;
-  line-height: 2em;
-  color: #ad8ee6;
+    font-weight: bold;
+    line-height: 2em;
+    color: #ad8ee6;
 }
