@@ -14,10 +14,10 @@ header {
   display: flex;
   align-items: center;
 }
-header .title {
+header .time {
   letter-spacing: -1px;
 }
-header .tagline {
+header .date {
   color: #E5B680;
   margin-left: auto;
 }
