@@ -10,7 +10,7 @@
     <main>
         <header>
             <h2 class="time">
-                <script>document.write(new Date().toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true }))</script>
+                <script>document.write(new Date().toLocaleString('en-US', {hour: 'numeric', minute: 'numeric', hour12: true}))</script>
             </h2>
             <p class="date">
                 <script> document.write(new Date().toLocaleDateString())</script>
@@ -18,7 +18,9 @@
         </header>
         <div class="wrapper">
             <div id="buttonsWrapper"></div>
-            <div id="contentWrapper"></div>
+            <center>
+                <div id="contentWrapper"></div>
+            </center>
         </div>
     </main>
     <script src="index.js"></script>
