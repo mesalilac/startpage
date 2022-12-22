@@ -94,9 +94,9 @@ button.active {
 
 .content.active {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     grid-gap: 10px;
-    animation: slide-up 800ms forwards, fade-in 400ms forwards;
+    animation: slide-up 500ms forwards, fade-in 800ms forwards;
 }
 
 @keyframes fade-in {
