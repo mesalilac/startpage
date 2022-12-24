@@ -8,7 +8,7 @@ function al(opts) {
     a.href = opts.href
 
     // open in new tab
-    // a.target = "_blank"
+    a.target = "_blank"
 
     li.appendChild(a)
 
