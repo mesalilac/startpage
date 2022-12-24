@@ -6,6 +6,9 @@ function al(opts) {
 
     a.text = opts.lable
     a.href = opts.href
+    if (opts.desc) {
+        a.title = opts.desc
+    }
 
     // open in new tab
     a.target = "_blank"
