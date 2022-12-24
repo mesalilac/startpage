@@ -1,58 +1,58 @@
 // only functions
 
-function al(opts) {
-    const li = document.createElement("li")
-    const a = document.createElement("a")
+function link(opts) {
+    const li = document.createElement('li');
+    const a = document.createElement('a');
 
-    a.text = opts.lable
-    a.href = opts.href
+    a.text = opts.lable;
+    a.href = opts.href;
     if (opts.desc) {
-        a.title = opts.desc
+        a.title = opts.desc;
     }
 
     // open in new tab
-    a.target = "_blank"
+    a.target = '_blank';
 
-    li.appendChild(a)
+    li.appendChild(a);
 
-    return li
+    return li;
 }
 
-function at(opts) {
-    const id = opts.id
-    const links = opts.links
-    const active = opts.active || false
+function tab(opts) {
+    const id = opts.id;
+    const links = opts.links;
+    const active = opts.active || false;
 
-    const tab = document.createElement("button")
+    const tab = document.createElement('button');
 
-    tab.classList.add("tab-button")
+    tab.classList.add('tab-button');
     if (active === true) {
-        tab.classList.add("active")
+        tab.classList.add('active');
     }
 
-    tab.setAttribute("data-id", id)
-    tab.textContent = id
+    tab.setAttribute('data-id', id);
+    tab.textContent = id;
 
-    const whitespace = document.createTextNode(" ");
-    const buttonsWrapper = document.querySelector("#buttonsWrapper")
+    const whitespace = document.createTextNode(' ');
+    const buttonsWrapper = document.querySelector('#buttonsWrapper');
 
-    buttonsWrapper.appendChild(tab)
-    buttonsWrapper.appendChild(whitespace)
+    buttonsWrapper.appendChild(tab);
+    buttonsWrapper.appendChild(whitespace);
 
-    const ul = document.createElement("ul")
+    const ul = document.createElement('ul');
 
-    ul.classList.add("content")
+    ul.classList.add('content');
     if (active === true) {
-        ul.classList.add("active")
+        ul.classList.add('active');
     }
 
-    ul.id = id
+    ul.id = id;
 
     for (index in links) {
-        li = links[index]
+        li = links[index];
 
-        ul.appendChild(li)
+        ul.appendChild(li);
     }
 
-    document.querySelector("#contentWrapper").appendChild(ul)
+    document.querySelector('#contentWrapper').appendChild(ul);
 }

@@ -10,10 +10,20 @@
     <main>
         <header>
             <h2 class="time">
-                <script>document.write(new Date().toLocaleString('en-US', {hour: 'numeric', minute: 'numeric', hour12: true}))</script>
+                <script>
+                    document.write(
+                        new Date().toLocaleString('en-US', {
+                            hour: 'numeric',
+                            minute: 'numeric',
+                            hour12: true,
+                        })
+                    );
+                </script>
             </h2>
             <p class="date">
-                <script> document.write(new Date().toLocaleDateString())</script>
+                <script>
+                    document.write(new Date().toLocaleDateString());
+                </script>
             </p>
         </header>
         <div class="wrapper">

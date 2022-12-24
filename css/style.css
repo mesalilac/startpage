@@ -1,31 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap');
 
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 html,
 body {
-  font-size: 1.15rem;
-  background-color: #272B35;
+    font-size: 1.15rem;
+    background-color: #272b35;
 }
 
 header {
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
 }
 header .time {
-  letter-spacing: -1px;
+    letter-spacing: -1px;
 }
 header .date {
-  color: #E5B680;
-  margin-left: auto;
+    color: #e5b680;
+    margin-left: auto;
 }
 
 main {
-  color: #E5B680;
-  margin: 0 auto;
-  max-width: 70rem;
+    color: #e5b680;
+    margin: 0 auto;
+    max-width: 70rem;
 }
 
 a {
@@ -40,17 +40,17 @@ a {
 }
 
 a.disabled {
-    color: #5C5E61;
+    color: #5c5e61;
     pointer-events: none;
     cursor: default;
 }
 
 a:hover {
-    color: #E5B680;
+    color: #e5b680;
 }
 
 .wrapper {
-    background-color: #272B35;
+    background-color: #272b35;
 }
 
 button {
@@ -66,11 +66,11 @@ button {
 }
 
 button:hover {
-    background-color: #DFBF9A;
+    background-color: #dfbf9a;
 }
 
 button.active {
-    background-color: #E5B680;
+    background-color: #e5b680;
 }
 
 .active {
@@ -84,7 +84,7 @@ button.active {
 
 .content {
     display: none;
-    background-color: #272B35;
+    background-color: #272b35;
     padding: 10px 20px;
 }
 
@@ -95,7 +95,7 @@ button.active {
 .content.active {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    justify-content:space-between;
+    justify-content: space-between;
 
     animation: slide-up 500ms forwards, fade-in 800ms forwards;
 }
