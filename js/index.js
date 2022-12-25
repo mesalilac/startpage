@@ -1,5 +1,11 @@
 // only functions
 
+/**
+  * @param {Object} opts
+  * @param {string} opts.lable
+  * @param {string} opts.href
+  * @param {string} opts.desc
+*/
 function link(opts) {
     const li = document.createElement('li');
     const a = document.createElement('a');
@@ -18,6 +24,12 @@ function link(opts) {
     return li;
 }
 
+/**
+  * @param {Object} opts
+  * @param {string} opts.id
+  * @param {Array} opts.links
+  * @param {boolean} opts.active
+*/
 function tab(opts) {
     const id = opts.id;
     const links = opts.links;
