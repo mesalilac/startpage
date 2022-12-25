@@ -10,6 +10,15 @@ tab({
 });
 
 tab({
+    id: 'Online shopping',
+    links: [
+        link({ lable: 'Amazon us', href: 'https://www.amazon.com/' }),
+        link({ lable: 'Amazon sa', href: 'https://www.amazon.sa/' }),
+        link({ lable: 'Aliexpress', href: 'https://www.aliexpress.com/' }),
+    ],
+});
+
+tab({
     id: 'Dev',
     links: [link({ lable: 'Github', href: 'https://github.com/' })],
 });
