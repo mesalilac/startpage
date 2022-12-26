@@ -115,11 +115,8 @@ a:hover {
 
 .content.active {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-gap: 3px;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     justify-items: center;
-    align-items: center;
-
     animation: slide-up 500ms forwards, fade-in 800ms forwards;
 }
 
