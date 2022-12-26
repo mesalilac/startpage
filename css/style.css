@@ -32,7 +32,6 @@ main {
 a {
     text-decoration: none;
     color: #8c8c8b;
-    background-color: #313540;
     border-radius: 3%;
     display: block;
     padding: 5px 15px;
@@ -59,7 +58,7 @@ a:hover {
     border-bottom: 1px solid #dfbf9a;
     padding: 5px 18px;
     margin-top: 4px;
-    color: #CECECE;
+    color: #cecece;
     background: none;
     border-radius: 1px;
     font-size: 18px;
