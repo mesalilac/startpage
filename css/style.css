@@ -32,7 +32,6 @@ main {
 a {
     text-decoration: none;
     color: #8c8c8b;
-    border-radius: 3%;
     display: block;
     padding: 5px 15px;
     width: max-content;
@@ -100,7 +99,18 @@ a:hover {
 }
 
 .content li {
+    border: none;
+    border-right: 1px solid transparent;
+    border-left: 1px solid transparent;
     list-style-type: none;
+    width: fit-content;
+    border-radius: 1px;
+    transition: 0.2s;
+}
+
+.content li:hover {
+    border-right: 1px solid #e5b680;
+    border-left: 1px solid #e5b680;
 }
 
 .content.active {
