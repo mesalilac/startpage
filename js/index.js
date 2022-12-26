@@ -1,6 +1,6 @@
 tab({
     active: true,
-    id: 'Main',
+    id: 'General',
     links: [
         link({ lable: 'Youtube', href: 'https://www.youtube.com/' }),
         link({ lable: 'Wallhaven', href: 'https://wallhaven.cc/' }),
