@@ -31,7 +31,7 @@ function link(opts) {
  * @param {boolean} opts.active
  */
 function tab(opts) {
-    const id = opts.id;
+    const id = opts.id || "New tab";
     const links = opts.links;
     const active = opts.active || false;
 
