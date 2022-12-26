@@ -77,6 +77,13 @@ a:hover {
     background-color: #e5b680;
 }
 
+#buttonsWrapper button:disabled {
+    border: none;
+    background-color: gray;
+    pointer-events: none;
+    cursor: default;
+}
+
 .active {
     background-color: white;
 }

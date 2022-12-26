@@ -1,11 +1,11 @@
 // only functions
 
 /**
-  * @param {Object} opts
-  * @param {string} opts.lable
-  * @param {string} opts.href
-  * @param {string} opts.desc
-*/
+ * @param {Object} opts
+ * @param {string} opts.lable
+ * @param {string} opts.href
+ * @param {string} opts.desc
+ */
 function link(opts) {
     const li = document.createElement('li');
     const a = document.createElement('a');
@@ -25,19 +25,26 @@ function link(opts) {
 }
 
 /**
-  * @param {Object} opts
-  * @param {string} opts.id
-  * @param {Array} opts.links
-  * @param {boolean} opts.active
-*/
+ * @param {Object} opts
+ * @param {string} opts.id
+ * @param {Array} opts.links
+ * @param {boolean} opts.active
+ */
 function tab(opts) {
     const id = opts.id;
     const links = opts.links;
     const active = opts.active || false;
 
     const tab = document.createElement('button');
+    const contentWrapper = document.querySelector('#contentWrapper');
 
     tab.classList.add('tab-button');
+
+    if (links == undefined || links.length == 0) {
+        tab.disabled = true;
+        tab.classList.add('disabled');
+    }
+
     if (active === true) {
         tab.classList.add('active');
     }
@@ -66,5 +73,5 @@ function tab(opts) {
         ul.appendChild(li);
     }
 
-    document.querySelector('#contentWrapper').appendChild(ul);
+    contentWrapper.appendChild(ul);
 }
