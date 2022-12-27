@@ -15,6 +15,8 @@ tab({
         link({ lable: 'Amazon us', href: 'https://www.amazon.com/' }),
         link({ lable: 'Amazon sa', href: 'https://www.amazon.sa/' }),
         link({ lable: 'Aliexpress', href: 'https://www.aliexpress.com/' }),
+        link({ lable: 'Newegg', href: 'https://www.newegg.com/' }),
+        link({ lable: 'Ebay', href: 'https://www.ebay.com/' }),
     ],
 });
 
