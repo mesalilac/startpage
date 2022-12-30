@@ -100,8 +100,6 @@ a:hover {
 
 .content li {
     border: none;
-    border-right: 1px solid transparent;
-    border-left: 1px solid transparent;
     list-style-type: none;
     width: fit-content;
     border-radius: 1px;
@@ -109,8 +107,9 @@ a:hover {
 }
 
 .content li:hover {
-    border-right: 1px solid #e5b680;
-    border-left: 1px solid #e5b680;
+    background-color: #1C1C1C;
+    border-radius: 3px;
+
 }
 
 .content.active {
