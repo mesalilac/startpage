@@ -71,7 +71,6 @@ a:hover {
 }
 
 #buttonsWrapper button.active {
-    border: none;
     color: #232c3d;
     background-color: #e58080;
 }
