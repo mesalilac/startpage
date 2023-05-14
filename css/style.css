@@ -19,12 +19,12 @@ header .time {
     letter-spacing: -1px;
 }
 header .date {
-    color: #e58080;
+    color: #DADADA;
     margin-left: auto;
 }
 
 main {
-    color: #e58080;
+    color: #DADADA;
     margin: 0 auto;
     max-width: 70rem;
 }
