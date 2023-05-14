@@ -1,77 +1,72 @@
-// only functions
-
-/**
- * @param {Object} opts
- * @param {string} opts.lable
- * @param {string} opts.href
- * @param {string} opts.desc
- */
-function link(opts) {
-    const li = document.createElement('li');
-    const a = document.createElement('a');
-
-    a.text = opts.lable;
-    a.href = opts.href;
-    if (opts.desc) {
-        a.title = opts.desc;
+class Tab {
+    constructor(id, active) {
+        this.id = id || 'New tab';
+        this.active = active;
+        this.list = [];
     }
 
-    // open in new tab
-    a.target = '_blank';
+    add(name, href, desc) {
+        const li = document.createElement('li');
+        const a = document.createElement('a');
 
-    li.appendChild(a);
+        a.text = name;
+        a.href = href;
 
-    return li;
-}
+        if (desc) {
+            a.title = desc;
+        }
 
-/**
- * @param {Object} opts
- * @param {string} opts.id
- * @param {Array} opts.links
- * @param {boolean} opts.active
- */
-function tab(opts) {
-    const id = opts.id || 'New tab';
-    const links = opts.links;
-    const active = opts.active || false;
+        // open in new tab
+        a.target = '_blank';
 
-    const tab = document.createElement('button');
-    const contentWrapper = document.querySelector('#contentWrapper');
+        li.appendChild(a);
 
-    tab.classList.add('tab-button');
+        this.list.push(li);
 
-    if (links == undefined || links.length == 0) {
-        tab.disabled = true;
-        tab.classList.add('disabled');
+        return this;
     }
 
-    if (active === true) {
-        tab.classList.add('active');
+    // Create the tab
+    build() {
+        const tab = document.createElement('button');
+
+        tab.classList.add('tab-button');
+
+        if (this.list.length == 0) {
+            tab.disabled = true;
+            tab.classList.add('disabled');
+        }
+
+        if (this.active === true) {
+            tab.classList.add('active');
+        }
+
+        tab.setAttribute('data-id', this.id);
+        tab.textContent = this.id;
+
+        const contentWrapper = document.querySelector('#contentWrapper');
+
+        const whitespace = document.createTextNode(' ');
+        const buttonsWrapper = document.querySelector('#buttonsWrapper');
+
+        buttonsWrapper.appendChild(tab);
+        buttonsWrapper.appendChild(whitespace);
+
+        const ul = document.createElement('ul');
+
+        ul.classList.add('content');
+        if (this.active === true) {
+            ul.classList.add('active');
+        }
+
+        ul.id = this.id;
+
+        for (var i = 0; i < this.list.length; i++) {
+            let li = this.list[i];
+
+            ul.appendChild(li);
+        }
+
+        contentWrapper.appendChild(ul);
     }
-
-    tab.setAttribute('data-id', id);
-    tab.textContent = id;
-
-    const whitespace = document.createTextNode(' ');
-    const buttonsWrapper = document.querySelector('#buttonsWrapper');
-
-    buttonsWrapper.appendChild(tab);
-    buttonsWrapper.appendChild(whitespace);
-
-    const ul = document.createElement('ul');
-
-    ul.classList.add('content');
-    if (active === true) {
-        ul.classList.add('active');
-    }
-
-    ul.id = id;
-
-    for (index in links) {
-        li = links[index];
-
-        ul.appendChild(li);
-    }
-
-    contentWrapper.appendChild(ul);
 }

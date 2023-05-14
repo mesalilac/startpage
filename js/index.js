@@ -1,41 +1,27 @@
-tab({
-    active: true,
-    id: 'General',
-    links: [
-        link({ lable: 'Youtube', href: 'https://www.youtube.com/' }),
-        link({ lable: 'Wallhaven', href: 'https://wallhaven.cc/' }),
-        link({ lable: 'gmail', href: 'https://mail.google.com/mail/' }),
-        link({ lable: 'calendar', href: 'https://calendar.google.com/' }),
-    ],
-});
+new Tab('General', true)
+    .add('Youtube', 'https://www.youtube.com')
+    .add('Wallhaven', 'https://wallhaven.cc')
+    .add('Gmail', 'https://mail.google.com/mail')
+    .add('calendar', 'https://calendar.google.com')
+    .build();
 
-tab({
-    id: 'Online shopping',
-    links: [
-        link({ lable: 'Amazon us', href: 'https://www.amazon.com/' }),
-        link({ lable: 'Amazon sa', href: 'https://www.amazon.sa/' }),
-        link({ lable: 'Aliexpress', href: 'https://www.aliexpress.com/' }),
-        link({ lable: 'Newegg', href: 'https://www.newegg.com/' }),
-        link({
-            lable: 'Newegg sa',
-            href: 'https://www.newegg.com/global/sa-en/',
-        }),
-        link({ lable: 'Ebay', href: 'https://www.ebay.com/' }),
-    ],
-});
+new Tab('Online shopping')
+    .add('Amazon us', 'https://www.amazon.com')
+    .add('Amazon sa', 'https://www.amazon.sa')
+    .add('Aliexpress', 'https://www.aliexpress.com')
+    .add('Newegg', 'https://www.newegg.com')
+    .add('Ebay', 'https://www.ebay.com')
+    .build();
 
-tab({
-    id: 'Dev',
-    links: [link({ lable: 'Github', href: 'https://github.com/' })],
-});
+new Tab('Dev')
+    .add('Github', 'https://github.com')
+    .build();
 
-tab({
-    id: 'Anime',
-    links: [
-        link({ lable: 'Anilist', href: 'https://anilist.co/home' }),
-        link({ lable: 'MAL', href: 'https://myanimelist.net/' }),
-        link({ lable: 'Animepahe', href: 'https://animepahe.org/' }),
-        link({ lable: 'Animixplay', href: 'https://animixplay.to/' }),
-        link({ lable: 'Subsplease', href: 'https://subsplease.org/' }),
-    ],
-});
+new Tab('Anime')
+    .add('Anilist', 'https://anilist.co/home')
+    .add('MAL', 'https://myanimelist.net')
+    .add('Animepahe', 'https://animepahe.org')
+    .add('Animixplay', 'https://animixplay.to')
+    .add('Subsplease', 'https://subsplease.org')
+    .build();
+
