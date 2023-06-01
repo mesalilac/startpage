@@ -21,7 +21,7 @@ new Tab('Anime')
     .add('Anilist', 'https://anilist.co/home')
     .add('MAL', 'https://myanimelist.net')
     .add('Animepahe', 'https://animepahe.org')
-    .add('Gogoanime', 'https://gogoanime.mom')
+    .add('Gogoanime', 'https://gogoanime.cl')
     .add('Subsplease', 'https://subsplease.org')
     .build();
 
