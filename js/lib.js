@@ -1,65 +1,43 @@
-class Tab {
-    constructor(id, active) {
-        this.id = id || 'New tab';
-        this.active = active;
+
+class Section {
+    constructor(name) {
+        this.name = name;
         this.list = [];
     }
 
-    add(name, href, desc) {
+    add(name, url, desc) {
         const li = document.createElement('li');
         const a = document.createElement('a');
 
         a.text = name;
-        a.href = href;
+        a.href = url;
 
         if (desc) {
             a.title = desc;
         }
 
-        // open in new tab
-        a.target = '_blank';
+        // a.target = '_blank';
 
         li.appendChild(a);
 
-        this.list.push(li);
+        this.list.push(li)
 
-        return this;
+        return this
     }
 
-    // Create the tab
     build() {
-        const tab = document.createElement('button');
-
-        tab.classList.add('tab-button');
-
-        if (this.list.length == 0) {
-            tab.disabled = true;
-            tab.classList.add('disabled');
-        }
-
-        if (this.active === true) {
-            tab.classList.add('active');
-        }
-
-        tab.setAttribute('data-id', this.id);
-        tab.textContent = this.id;
-
-        const contentWrapper = document.querySelector('#contentWrapper');
-
-        const whitespace = document.createTextNode(' ');
-        const buttonsWrapper = document.querySelector('#buttonsWrapper');
-
-        buttonsWrapper.appendChild(tab);
-        buttonsWrapper.appendChild(whitespace);
-
+        const div = document.createElement('div');
         const ul = document.createElement('ul');
 
-        ul.classList.add('content');
-        if (this.active === true) {
-            ul.classList.add('active');
+        div.classList.add('section')
+
+        if (this.list.length == 0) {
+            div.classList.add('empty');
         }
 
-        ul.id = this.id;
+        const sections = document.querySelector('#sections');
+
+        const whitespace = document.createTextNode(' ');
 
         for (var i = 0; i < this.list.length; i++) {
             let li = this.list[i];
@@ -67,6 +45,15 @@ class Tab {
             ul.appendChild(li);
         }
 
-        contentWrapper.appendChild(ul);
+        const p = document.createElement('p');
+
+        p.textContent = this.name;
+        p.classList.add('section-name');
+
+        div.appendChild(p);
+        div.appendChild(ul);
+
+        sections.appendChild(div);
+        sections.appendChild(whitespace);
     }
 }
