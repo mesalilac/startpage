@@ -5,6 +5,7 @@ new Section('General')
     .add('Drawio', 'https://www.drawio.com/')
     .add('Gmail', 'https://mail.google.com/mail')
     .add('Calendar', 'https://calendar.google.com')
+    .add('Pinterest', 'https://www.pinterest.com/')
     .create();
 
 new Section('Online shopping')
