@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Andika&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:ital,wght@0,200..800;1,200..800&display=swap');
 
 * {
     box-sizing: border-box;
@@ -6,8 +6,11 @@
 
 html,
 body {
-    font-size: 1.15rem;
-    font-family: 'Andika', sans-serif;
+    font-size: 1rem;
+    font-family: 'Atkinson Hyperlegible Mono', sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
     background-color: #171619;
 }
 
