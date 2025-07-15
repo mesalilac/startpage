@@ -92,12 +92,12 @@ new Section('Design')
         'Outline SVG icons (Tailwind CSS)',
     )
     .add(
-        'Flaticon'.
+        'Flaticon',
         'https://www.flaticon.com/icon-fonts-most-downloaded',
         'Large icon database'
         )
     .add(
-        'Freesvgicons'.
+        'Freesvgicons',
         'https://freesvgicons.com/',
         'Free SVG icons'
         )
