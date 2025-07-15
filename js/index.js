@@ -91,6 +91,21 @@ new Section('Design')
         'https://heroicons.com/outline',
         'Outline SVG icons (Tailwind CSS)',
     )
+    .add(
+        'Flaticon'.
+        'https://www.flaticon.com/icon-fonts-most-downloaded',
+        'Large icon database'
+        )
+    .add(
+        'Freesvgicons'.
+        'https://freesvgicons.com/',
+        'Free SVG icons'
+        )
+    .add(
+        'Flowbite',
+        'https://flowbite.com/icons/',
+        'Flowbite SVG icons'
+        )
     .create();
 
 new Section('Utilities & Testing')
