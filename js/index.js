@@ -7,7 +7,7 @@ new Section('General')
         'Virtual whiteboard for diagrams',
     )
     .add('Gmail', 'https://mail.google.com/mail', 'Gmail web interface')
-    .add('Proton Mail', 'https://mail.proton.me', 'Proton Mail web interface')
+    .add('Proton', 'https://mail.proton.me', 'Proton Mail web interface')
     .add('Calendar', 'https://calendar.google.com', 'Google Calendar online')
     .add(
         'Wikipedia',
@@ -36,7 +36,7 @@ new Section('Dev')
         'Version control and collaboration platform',
     )
     .add('StackOverflow', 'https://stackoverflow.com', 'Q&A for programmers')
-    .add('MDN Web Docs', 'https://developer.mozilla.org/en-US', 'MDN Web Docs')
+    .add('MDN Web', 'https://developer.mozilla.org/en-US', 'MDN Web Docs')
     .add(
         'Rust Book',
         'https://doc.rust-lang.org/book/',
@@ -59,24 +59,20 @@ new Section('Dev')
     )
     .add('Css Tricks', 'https://css-tricks.com', 'CSS and web design articles')
     .add(
-        'SolidJS Docs',
+        'SolidJS',
         'https://docs.solidjs.com/quick-start',
         'SolidJS quick start',
     )
     .add(
-        'TS Docs',
+        'TS',
         'https://www.typescriptlang.org/docs',
         'TypeScript official docs',
     )
     .add('Crate Docs', 'https://docs.rs', 'Rust crate documentation hub')
-    .add(
-        'Axum Docs',
-        'https://docs.rs/axum/latest/axum',
-        'Axum web framework docs',
-    )
-    .add('Python3 Docs', 'https://docs.python.org/3', 'Python 3 official docs')
-    .add('Tauri V2 Docs', 'https://v2.tauri.app/start', 'Tauri v2 quick start')
-    .add('Jsdoc Docs', 'https://jsdoc.app', 'JSDoc official website')
+    .add('Axum', 'https://docs.rs/axum/latest/axum', 'Axum web framework docs')
+    .add('Python3', 'https://docs.python.org/3', 'Python 3 official docs')
+    .add('Tauri V2', 'https://v2.tauri.app/start', 'Tauri v2 quick start')
+    .add('Jsdoc', 'https://jsdoc.app', 'JSDoc official website')
     .create();
 
 new Section('Design')
@@ -99,7 +95,7 @@ new Section('Design')
     .create();
 
 new Section('Utilities & Testing')
-    .add('Regex 101', 'https://regex101.com', 'Online regex tester')
+    .add('Regex101', 'https://regex101.com', 'Online regex tester')
     .add(
         'TS Playground',
         'https://www.typescriptlang.org/play',
