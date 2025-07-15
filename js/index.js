@@ -69,7 +69,6 @@ new Section('Dev')
         'TypeScript official docs',
     )
     .add('Crate Docs', 'https://docs.rs', 'Rust crate documentation hub')
-    .add('Axum', 'https://docs.rs/axum/latest/axum', 'Axum web framework docs')
     .add('Python3', 'https://docs.python.org/3', 'Python 3 official docs')
     .add('Tauri V2', 'https://v2.tauri.app/start', 'Tauri v2 quick start')
     .create();
