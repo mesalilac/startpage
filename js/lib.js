@@ -108,5 +108,6 @@ function generate_favicon_url(url, size) {
 
     let domain_url = tmp_list.join('.');
 
-    return `https://www.google.com/s2/favicons?sz=${size}&domain_url=${domain_url}`;
+    // return `https://www.google.com/s2/favicons?sz=${size}&domain_url=${domain_url}`;
+    return "";
 }
