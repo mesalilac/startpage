@@ -21,6 +21,7 @@ export default defineConfig(({ mode }) => {
                 targetDir: './public/favicon',
             }),
         ],
+        base: '/startpage/',
         server: {
             port: 3000,
         },
