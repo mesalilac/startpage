@@ -9,7 +9,7 @@ import {
 import { createStore, SetStoreFunction } from 'solid-js/store';
 import type { T_Data } from './consts';
 
-import data_json from '@data';
+import data_json from '../public/data.json';
 
 const createDataStore = () => {
     const [store, setStore] = createStore<T_Data>(data_json);
