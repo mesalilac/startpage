@@ -1,0 +1,19 @@
+.LinkContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.LinkActions {
+    display: flex;
+    flex-direction: row;
+    gap: var(--size-gap-lg);
+}
+
+.LinkIconName {
+    display: flex;
+    flex-direction: row;
+    gap: var(--size-gap-sm);
+    align-items: center;
+}

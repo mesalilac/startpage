@@ -1,0 +1,27 @@
+{
+    "compilerOptions": {
+        // General
+        "jsx": "preserve",
+        "jsxImportSource": "solid-js",
+        "target": "ESNext",
+        // Modules
+        "allowSyntheticDefaultImports": true,
+        "esModuleInterop": true,
+        "isolatedModules": true,
+        "module": "ESNext",
+        "moduleResolution": "bundler",
+        "noEmit": true,
+        // Type Checking & Safety
+        "strict": true,
+        "types": [
+            "vite/client"
+        ],
+        "paths": {
+            "@components": ["./src/components"],
+            "@components/*": ["./src/components/*"],
+            "@store": ["./src/store"],
+            "@consts": ["./src/consts"],
+            "@utils": ["./src/utils"]
+        }
+    }
+}

@@ -1,0 +1,38 @@
+.SectionContainer {
+    display: flex;
+    flex-direction: column;
+    gap: var(--size-gap-sm);
+    
+    width: var(--size-section-width);
+    max-height: var(--size-section-height);
+    
+    background-color: var(--color-surface-base);
+    padding: var(--size-padding-sm);
+    border-radius: var(--size-radius-card);
+}
+
+.SectionHeaderContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.SectionHeaderContainer p {
+    font-weight: bold;    
+}
+
+.SectionHeaderActions {
+    display: flex;
+    flex-direction: row;
+    gap: var(--size-gap-lg);
+}
+
+.SectionLinksContainer {
+    padding: var(--size-padding-xs);
+    display: flex;
+    
+    overflow-y: scroll;
+    flex-direction: column;
+    gap: var(--size-gap-sm);
+}

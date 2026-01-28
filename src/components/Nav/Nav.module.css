@@ -1,0 +1,23 @@
+.navContainer {
+    background-color: var(--color-surface-base);
+    width: 100%;
+    
+    display: flex;
+    flex-direction: row;
+    
+    padding: var(--size-margin-sm);
+    justify-content: space-between;
+    align-items: center;
+    border-radius: var(--size-radius-menu);
+}
+
+.navContainer p {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.navActions {
+    display: flex;
+    flex-direction: row;
+    gap: var(--size-margin-sm);
+}

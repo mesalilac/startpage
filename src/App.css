@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap');
+
+* {
+    min-width: none;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --size-section-width: 350px;
+    --size-section-height: var(--size-section-width);
+}
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+
+    background-color: var(--color-app-bg);
+    color: var(--color-app-fg);
+    font-family: "Inconsolata", monospace;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
+}
+
+input, button, textarea, select {
+    font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+p {
+    text-wrap: pretty;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+}
+
+input, textarea {
+    border: var(--size-border-medium) solid var(--color-input-border);
+    outline: none;
+    
+    background-color: var(--color-input-bg);
+    color: var(--color-input-fg);
+    border-radius: var(--size-radius-input);
+    padding: var(--size-padding-2xs) var(--size-padding-md);
+}
+
+input:hover, textarea:hover {
+    background-color: hsl(from var(--color-input-bg-hover) h s l / 20%);
+}
+
+input:focus, textarea:focus {
+    border-color: var(--color-input-border-focus);
+}
+
+input::placeholder, textarea::placeholder {
+    color: var(--color-input-placeholder);
+}
+
+.input-error {
+    color: var(--color-input-error-fg);
+    border-color: var(--color-input-error-border);
+}
+
+.input-warning {
+    color: var(--color-input-warning-fg);
+    border-color: var(--color-input-warning-border);
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    
+    background-color: var(--color-button-bg);
+    color: var(--color-button-fg);
+    border-radius: var(--size-radius-button);
+    padding: var(--size-padding-2xs) var(--size-padding-md);
+}
+
+button:hover {
+    background-color: var(--color-button-bg-hover);
+}
+
+button:active {
+    background-color: var(--color-button-bg-active)
+}
+
+.button-primary {
+    cursor: pointer;
+    border: none;
+    
+    background-color: var(--color-button-primary);
+    color: var(--color-button-fg);
+    border-radius: var(--size-radius-button);
+    padding: var(--size-padding-2xs) var(--size-padding-md);
+}
+
+.button-primary:hover {
+    background-color: var(--color-button-primary-hover);
+}
+
+.button-primary:active {
+    background-color: var(--color-button-primary-active)
+}
+
+.button-secondary {
+    cursor: pointer;
+    border: none;
+    
+    background-color: var(--color-button-secondary);
+    color: var(--color-button-fg);
+    border-radius: var(--size-radius-button);
+    padding: var(--size-padding-2xs) var(--size-padding-md);
+}
+
+.button-secondary:hover {
+    background-color: var(--color-button-secondary-hover);
+}
+
+.button-secondary:active {
+    background-color: var(--color-button-secondary-active)
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    margin: var(--size-margin-lg);
+    gap: var(--size-gap-lg);
+}
+
+.divider {
+    width: 100%;
+    height: 2px;
+    background-color: var(--color-border-divider);
+}
+
+.icon {
+    color: var(--color-icon-muted);
+    cursor: pointer;
+}
+
+.icon-add-plus {
+    color: var(--color-icon-muted);
+}
+
+.icon-edit {
+    color: var(--color-icon-muted);
+}
+
+.icon-edit:hover {
+    color: var(--color-intent-info-bg);
+}
+
+.icon-trash {
+    color: var(--color-icon-muted);
+}
+
+.icon-trash:hover {
+    color: var(--color-intent-danger-bg);
+}

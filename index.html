@@ -1,53 +1,18 @@
-<!doctype html>
-<html lang="en" class="classes">
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <title>~/</title>
-    <link rel="stylesheet" href="css/style.css" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <title>Solid App</title>
 </head>
 
 <body>
-    <script>
-        function updateDate() {
-            let header_time = document.getElementById('time');
-            let header_date = document.getElementById('date');
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
 
-            header_time.textContent = new Date().toLocaleString('en-US', {
-                hour: 'numeric',
-                minute: 'numeric',
-                second: 'numeric',
-                hour12: true,
-            });
-
-            header_date.textContent = new Date().toLocaleDateString();
-        }
-
-        setInterval(updateDate, 1000);
-    </script>
-    <main>
-        <header>
-            <h2 id="time">
-                <script>
-                    document.write(
-                        new Date().toLocaleString('en-US', {
-                            hour: 'numeric',
-                            minute: 'numeric',
-                            second: 'numeric',
-                            hour12: true,
-                        }),
-                    );
-                </script>
-            </h2>
-            <p id="date">
-                <script>
-                    document.write(new Date().toLocaleDateString());
-                </script>
-            </p>
-        </header>
-        <div id="sections"></div>
-    </main>
-    <script src="js/lib.js"></script>
-    <script src="js/index.js"></script>
+    <script src="/src/index.tsx" type="module"></script>
 </body>
 
 </html>
