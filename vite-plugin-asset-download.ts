@@ -33,7 +33,7 @@ export default function (options: {
                         try {
                             await fs.access(filePath);
                         } catch {
-                            // biome-ignore lint/suspicious/noConsole: <explanation>
+                            // biome-ignore lint/suspicious/noConsole: <off>
                             console.log(
                                 `Downloading ${link.name}, ${link.url}...`,
                             );
