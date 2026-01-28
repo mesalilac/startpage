@@ -1,6 +1,6 @@
 import { useData } from '@store';
 
-import { createMemo, Show } from 'solid-js';
+import { createMemo, Show, JSX } from 'solid-js';
 import { T_Link } from '@consts';
 import { EditLinkButton, IconTrash } from '@components';
 import { generate_favicon_url } from '@utils';
@@ -30,10 +30,12 @@ export const Link = (props: { sectionID: string; link: T_Link }) => {
     return (
         <div class={styles.LinkContainer} title={props.link.description}>
             <div class={styles.LinkIconName}>
-                <picture>
-                    <source src={faviconUrl()} />
-                    <img src={faviconFallbackUrl()} />
-                </picture>
+                <img
+                    src={faviconUrl()}
+                    onError={(e) =>
+                        (e.currentTarget.src = faviconFallbackUrl())
+                    }
+                />
                 <a>{props.link.name}</a>
             </div>
 
