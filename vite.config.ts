@@ -9,7 +9,7 @@ import path from 'node:path';
 export default defineConfig(({ mode }) => {
     const isDev = mode === 'development';
     const jsonFileName = isDev ? 'data.dev.json' : 'data.json';
-    const jsonPath = `./${jsonFileName}`;
+    const jsonPath = `./public/${jsonFileName}`;
 
     return {
         plugins: [
