@@ -9,7 +9,7 @@ import path from 'node:path';
 export default defineConfig(({ mode }) => {
     const isDev = mode === 'development';
     const jsonFileName = isDev ? 'data.dev.json' : 'data.json';
-    const jsonPath = `./public/${jsonFileName}`;
+    const jsonPath = `./src/${jsonFileName}`;
 
     return {
         plugins: [
@@ -21,7 +21,6 @@ export default defineConfig(({ mode }) => {
                 targetDir: './public/favicon',
             }),
         ],
-        base: '/startpage/',
         server: {
             port: 3000,
         },
