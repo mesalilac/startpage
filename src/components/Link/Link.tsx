@@ -29,15 +29,15 @@ export const Link = (props: { sectionID: string; link: T_Link }) => {
 
     return (
         <div class={styles.LinkContainer} title={props.link.description}>
-            <div class={styles.LinkIconName}>
+            <a class={styles.LinkIconName} href={props.link.url}>
                 <img
                     src={faviconUrl()}
                     onError={(e) =>
                         (e.currentTarget.src = faviconFallbackUrl())
                     }
                 />
-                <a>{props.link.name}</a>
-            </div>
+                <p>{props.link.name}</p>
+            </a>
 
             <Show when={data.editMode()}>
                 <div class={styles.LinkActions}>

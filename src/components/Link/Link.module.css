@@ -16,4 +16,10 @@
     flex-direction: row;
     gap: var(--size-gap-sm);
     align-items: center;
+    text-decoration: none;
+    color: var(--color-text-primary);
+}
+
+.LinkIconName:hover{
+    color: var(--color-accent-base);
 }
