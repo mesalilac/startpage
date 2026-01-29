@@ -20,7 +20,7 @@ export const Link = (props: { sectionID: string; link: T_Link }) => {
 
     const faviconUrl = createMemo(() => {
         const url = new URL(props.link.url);
-        return `/favicon/${url.hostname}.png`;
+        return `./favicon/${url.hostname}.png`;
     });
 
     const faviconFallbackUrl = createMemo(() => {
