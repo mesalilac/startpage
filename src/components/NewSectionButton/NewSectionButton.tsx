@@ -2,7 +2,7 @@ import { useData } from '@store';
 import { createSignal, createEffect } from 'solid-js';
 import { nanoid } from 'nanoid';
 
-import { Modal } from '@components';
+import { IconAddPlus, Modal } from '@components';
 import { T_Section, T_Link } from '@consts';
 import styles from './NewSectionButton.module.css';
 
@@ -47,7 +47,7 @@ export const NewSectionButton = () => {
     return (
         <>
             <button class='button-primary' onClick={() => setShowModal(true)}>
-                New section
+                <IconAddPlus class='icon-add-section' /> New section
             </button>
 
             <Modal
