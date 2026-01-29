@@ -94,7 +94,7 @@ export const EditLinkButton = (props: {
                         class='button-primary'
                         onClick={handleCreateNewLink}
                     >
-                        Create
+                        Save
                     </button>
                 }
             >
