@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap');
 
 * {
-    min-width: none;
+    min-width: 0;
     margin: 0;
     box-sizing: border-box;
 }
@@ -13,7 +13,6 @@
 
 body {
     line-height: 1.5;
-    -webkit-font-smoothing: antialiased;
 
     background-color: var(--color-app-bg);
     color: var(--color-app-fg);
