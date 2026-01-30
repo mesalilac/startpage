@@ -4,6 +4,7 @@ import { nanoid } from 'nanoid';
 
 import { IconAddPlus, Modal } from '@components';
 import { T_Section, T_Link } from '@consts';
+import { cleanupString, toTitleCase } from '@utils';
 import styles from './NewSectionButton.module.css';
 
 export const NewSectionButton = () => {
@@ -23,7 +24,7 @@ export const NewSectionButton = () => {
 
         const newSection: T_Section = {
             id: nanoid(),
-            name: newSectionName().trim(),
+            name: toTitleCase(cleanupString(newSectionName().trim())),
             links: [],
         };
 
