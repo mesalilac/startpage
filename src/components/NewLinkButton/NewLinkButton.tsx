@@ -17,13 +17,17 @@ const isValidUrl = (url: string) => {
 };
 
 const cleanupUrl = (url: string) => {
-    const currentUrl = new URL(url);
+    let currentUrl = url;
 
-    if (currentUrl.pathname.endsWith('/')) {
-        currentUrl.pathname = currentUrl.pathname.slice(0, -1);
+    while (
+        currentUrl.endsWith('/') &&
+        !currentUrl.endsWith('://') &&
+        currentUrl !== '/'
+    ) {
+        currentUrl = currentUrl.slice(0, -1);
     }
 
-    return currentUrl.href;
+    return currentUrl;
 };
 
 export const NewLinkButton = (props: { sectionID: string }) => {
