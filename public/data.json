@@ -2,14 +2,8 @@
     "sections": [
         {
             "id": "sect-social-media",
-            "name": "Social Media & Networking",
+            "name": "Social Media & Community",
             "links": [
-                {
-                    "id": "l-soc-1",
-                    "name": "LinkedIn",
-                    "url": "https://linkedin.com",
-                    "description": "Professional networking and job hunting."
-                },
                 {
                     "id": "l-soc-2",
                     "name": "Twitter / X",
@@ -17,9 +11,9 @@
                     "description": "Real-time news and tech community updates."
                 },
                 {
-                    "id": "l-soc-3",
+                    "id": "oMscpBGtr4tZUlHfudmdE",
                     "name": "Reddit",
-                    "url": "https://reddit.com/r/programming",
+                    "url": "https://reddit.com",
                     "description": "The front page of the internet, specifically for devs."
                 },
                 {
@@ -27,48 +21,18 @@
                     "name": "Discord",
                     "url": "https://discord.com",
                     "description": "Community servers and real-time chat."
-                }
-            ]
-        },
-        {
-            "id": "sect-ai-tools",
-            "name": "AI & Machine Learning",
-            "links": [
-                {
-                    "id": "l-ai-1",
-                    "name": "ChatGPT",
-                    "url": "https://chatgpt.com",
-                    "description": "OpenAI's conversational AI model."
                 },
                 {
-                    "id": "l-ai-2",
-                    "name": "Claude",
-                    "url": "https://claude.ai",
-                    "description": "Anthropic's helpful and harmless AI assistant."
-                },
-                {
-                    "id": "l-ai-3",
-                    "name": "Hugging Face",
-                    "url": "https://huggingface.co",
-                    "description": "The AI community building the future of ML."
-                },
-                {
-                    "id": "l-ai-4",
-                    "name": "Midjourney",
-                    "url": "https://midjourney.com",
-                    "description": "AI-powered image generation tool."
-                },
-                {
-                    "id": "l-ai-5",
-                    "name": "Perplexity",
-                    "url": "https://perplexity.ai",
-                    "description": "AI-powered search and answer engine."
+                    "id": "0yNWn-wHGCuBD73MskAvX",
+                    "name": "www.pinterest.com",
+                    "url": "https://www.pinterest.com/",
+                    "description": ""
                 }
             ]
         },
         {
             "id": "sect-entertainment",
-            "name": "Entertainment & Streaming",
+            "name": "Entertainment & Tracking",
             "links": [
                 {
                     "id": "l-ent-1",
@@ -93,79 +57,37 @@
                     "name": "Spotify",
                     "url": "https://spotify.com",
                     "description": "Music and podcasts for deep work."
-                }
-            ]
-        },
-        {
-            "id": "sect-cloud-infra",
-            "name": "Cloud Infrastructure",
-            "links": [
-                {
-                    "id": "l-cloud-1",
-                    "name": "AWS",
-                    "url": "https://aws.amazon.com",
-                    "description": "Amazon Web Services dashboard."
                 },
                 {
-                    "id": "l-cloud-2",
-                    "name": "Google Cloud",
-                    "url": "https://console.cloud.google.com",
-                    "description": "GCP management console."
+                    "id": "8zOamsRu7p3jOj7IL34Ls",
+                    "name": "anilist.co",
+                    "url": "https://anilist.co",
+                    "description": ""
                 },
                 {
-                    "id": "l-cloud-3",
-                    "name": "Azure",
-                    "url": "https://portal.azure.com",
-                    "description": "Microsoft's cloud platform."
+                    "id": "76c6OBy3PBdOaIBTc5GIb",
+                    "name": "myanimelist.net",
+                    "url": "https://myanimelist.net/",
+                    "description": ""
                 },
                 {
-                    "id": "l-cloud-4",
-                    "name": "DigitalOcean",
-                    "url": "https://digitalocean.com",
-                    "description": "Simplified cloud hosting for developers."
+                    "id": "iVfQnSz7QVQKSugVMXjPQ",
+                    "name": "letterboxd.com",
+                    "url": "https://letterboxd.com/",
+                    "description": ""
                 },
                 {
-                    "id": "l-cloud-5",
-                    "name": "Vercel",
-                    "url": "https://vercel.com",
-                    "description": "Deployment platform for frontend frameworks."
-                },
-                {
-                    "id": "l-cloud-6",
-                    "name": "Netlify",
-                    "url": "https://netlify.com",
-                    "description": "Automated workflow for modern web projects."
+                    "id": "5p1rFB75a0aEe-Z3QIsVm",
+                    "name": "backloggd.com",
+                    "url": "https://backloggd.com/",
+                    "description": ""
                 }
             ]
         },
         {
             "id": "sect-documentation-heavy",
-            "name": "Framework Documentation",
+            "name": "Web & Software Dev",
             "links": [
-                {
-                    "id": "l-doc-1",
-                    "name": "React Docs",
-                    "url": "https://react.dev",
-                    "description": "Official documentation for React."
-                },
-                {
-                    "id": "l-doc-2",
-                    "name": "Vue.js",
-                    "url": "https://vuejs.org",
-                    "description": "The progressive JavaScript framework."
-                },
-                {
-                    "id": "l-doc-3",
-                    "name": "Tailwind CSS",
-                    "url": "https://tailwindcss.com",
-                    "description": "Utility-first CSS framework."
-                },
-                {
-                    "id": "l-doc-4",
-                    "name": "Next.js",
-                    "url": "https://nextjs.org/docs",
-                    "description": "The React framework for the web."
-                },
                 {
                     "id": "l-doc-5",
                     "name": "TypeScript",
@@ -179,22 +101,46 @@
                     "description": "Official Python 3 documentation."
                 },
                 {
-                    "id": "l-doc-7",
-                    "name": "Rust Book",
-                    "url": "https://doc.rust-lang.org/book/",
-                    "description": "Comprehensive guide to the Rust language."
-                },
-                {
                     "id": "l-doc-8",
                     "name": "Go Dev",
                     "url": "https://go.dev/doc/",
                     "description": "Go programming language documentation."
+                },
+                {
+                    "id": "tclONT4PSQKJC8kjuTV6W",
+                    "name": "dev.to",
+                    "url": "https://dev.to",
+                    "description": ""
+                },
+                {
+                    "id": "G7m_8JdNfR0j_w7dtDJ1I",
+                    "name": "developer.mozilla.org",
+                    "url": "https://developer.mozilla.org/en-US/",
+                    "description": ""
+                },
+                {
+                    "id": "mOoN9autKdRiIJbBNK2ya",
+                    "name": "www.solidjs.com",
+                    "url": "https://www.solidjs.com/",
+                    "description": ""
+                },
+                {
+                    "id": "ixJM_FQKLUCyEbOKSRE-o",
+                    "name": "github.com",
+                    "url": "https://github.com/",
+                    "description": ""
+                },
+                {
+                    "id": "lIh4frnYcxqcqErVwwzr6",
+                    "name": "react.dev",
+                    "url": "https://react.dev",
+                    "description": ""
                 }
             ]
         },
         {
             "id": "sect-productivity",
-            "name": "Productivity & Ops",
+            "name": "Productivity & Shopping",
             "links": [
                 {
                     "id": "l-prod-1",
@@ -209,82 +155,154 @@
                     "description": "Kanban boards for project management."
                 },
                 {
-                    "id": "l-prod-3",
-                    "name": "Slack",
-                    "url": "https://slack.com",
-                    "description": "Team communication and integration."
+                    "id": "NwdoYaQgtPPjM0aBtKq60",
+                    "name": "mail.google.com",
+                    "url": "https://mail.google.com",
+                    "description": ""
                 },
                 {
-                    "id": "l-prod-4",
-                    "name": "Jira",
-                    "url": "https://atlassian.com/software/jira",
-                    "description": "Issue and project tracking for agile teams."
+                    "id": "Qff2W0Se5-26pNsV87clf",
+                    "name": "proton.me",
+                    "url": "https://proton.me/",
+                    "description": ""
                 },
                 {
-                    "id": "l-prod-5",
-                    "name": "Linear",
-                    "url": "https://linear.app",
-                    "description": "High-performance project management tool."
+                    "id": "Rb0hTyxEjjb-p8W2sH9xS",
+                    "name": "calendar.google.com",
+                    "url": "https://calendar.google.com/calendar",
+                    "description": ""
+                },
+                {
+                    "id": "rWJYCPp4oc6kQ5a8DBkZJ",
+                    "name": "www.amazon.sa",
+                    "url": "https://www.amazon.sa/",
+                    "description": ""
+                },
+                {
+                    "id": "7hXcprbWDYDtl83kBOrMK",
+                    "name": "www.aliexpress.com",
+                    "url": "https://www.aliexpress.com",
+                    "description": ""
+                },
+                {
+                    "id": "ct27J5YV1pqT2PPepeqIT",
+                    "name": "www.wikipedia.org",
+                    "url": "https://www.wikipedia.org/",
+                    "description": ""
                 }
             ]
         },
         {
-            "id": "sect-finance",
-            "name": "Finance & Crypto",
+            "id": "lUjI8yQ2Z-EdxxOYUtUZT",
+            "name": "Developer Utilities",
             "links": [
                 {
-                    "id": "l-fin-1",
-                    "name": "Stripe",
-                    "url": "https://stripe.com",
-                    "description": "Payment processing for the internet."
+                    "id": "XpoHIsePpFDpYSdWt5DPa",
+                    "name": "regex101.com",
+                    "url": "https://regex101.com/",
+                    "description": ""
                 },
                 {
-                    "id": "l-fin-2",
-                    "name": "Coinbase",
-                    "url": "https://coinbase.com",
-                    "description": "Cryptocurrency exchange platform."
+                    "id": "tjI--0xtClT0TNWlkMoOe",
+                    "name": "jsonformatter.curiousconcept.com",
+                    "url": "https://jsonformatter.curiousconcept.com/",
+                    "description": ""
                 },
                 {
-                    "id": "l-fin-3",
-                    "name": "Robinhood",
-                    "url": "https://robinhood.com",
-                    "description": "Stock and options trading."
+                    "id": "MDIuKQGCy4oiiLGZELiD1",
+                    "name": "postimages.org",
+                    "url": "https://postimages.org/",
+                    "description": ""
                 }
             ]
         },
         {
-            "id": "sect-max-test",
-            "name": "Stress Test (20 Links)",
+            "id": "XexqK1IxZ6aCBUWWIji3G",
+            "name": "Design & Wireframing",
             "links": [
                 {
-                    "id": "m-1",
-                    "name": "Test Link 1",
-                    "url": "https://ex.com/1",
-                    "description": "Testing max capacity."
+                    "id": "fAc1vdcvQBPPcfpJPLz_V",
+                    "name": "excalidraw.com",
+                    "url": "https://excalidraw.com/",
+                    "description": ""
                 },
                 {
-                    "id": "m-2",
-                    "name": "Test Link 2",
-                    "url": "https://ex.com/2",
-                    "description": "Testing max capacity."
+                    "id": "gjd_UblTT7ZEU-u6b-etV",
+                    "name": "dribbble.com",
+                    "url": "https://dribbble.com/",
+                    "description": ""
                 },
                 {
-                    "id": "m-3",
-                    "name": "Test Link 3",
-                    "url": "https://ex.com/3",
-                    "description": "Testing max capacity."
+                    "id": "geGhwxDELhLgna2aH4Mf6",
+                    "name": "unsplash.com",
+                    "url": "https://unsplash.com/",
+                    "description": ""
                 },
                 {
-                    "id": "m-4",
-                    "name": "Test Link 4",
-                    "url": "https://ex.com/4",
-                    "description": "Testing max capacity."
+                    "id": "gZUR_qyQw6TMZrAurSMn9",
+                    "name": "www.pexels.com",
+                    "url": "https://www.pexels.com/",
+                    "description": ""
                 },
                 {
-                    "id": "m-5",
-                    "name": "Test Link 5",
-                    "url": "https://ex.com/5",
-                    "description": "Testing max capacity."
+                    "id": "eYkinWCyeiSGhft3arx1H",
+                    "name": "fonts.google.com",
+                    "url": "https://fonts.google.com/",
+                    "description": ""
+                },
+                {
+                    "id": "Ut-Nm9bSq8IuRDKQrDQna",
+                    "name": "coolors.co",
+                    "url": "https://coolors.co/",
+                    "description": ""
+                },
+                {
+                    "id": "lvBoonTffnIKzsH9cO1XT",
+                    "name": "iconbuddy.com",
+                    "url": "https://iconbuddy.com/",
+                    "description": ""
+                },
+                {
+                    "id": "fvIE45azY9vwB5y1sZOZY",
+                    "name": "flowbite.com",
+                    "url": "https://flowbite.com/",
+                    "description": ""
+                },
+                {
+                    "id": "JLWPUm_xcUaf44U_rAXNE",
+                    "name": "css-tricks.com",
+                    "url": "https://css-tricks.com/",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "id": "zUC4HVbMw2CuYO_msUiib",
+            "name": "The Rust Lab",
+            "links": [
+                {
+                    "id": "d-7YfModzmv7HoZeL7LSX",
+                    "name": "doc.rust-lang.org",
+                    "url": "https://doc.rust-lang.org",
+                    "description": ""
+                },
+                {
+                    "id": "wuSVz-F1mIajEPcL1wegK",
+                    "name": "doc.rust-lang.org",
+                    "url": "https://doc.rust-lang.org/book/",
+                    "description": ""
+                },
+                {
+                    "id": "nT9C8HtbRZvVZQG8J8ihY",
+                    "name": "docs.rs",
+                    "url": "https://docs.rs/",
+                    "description": ""
+                },
+                {
+                    "id": "2a3MM-Gufn0KglFw7bljy",
+                    "name": "v2.tauri.app",
+                    "url": "https://v2.tauri.app/",
+                    "description": ""
                 }
             ]
         }
