@@ -6,6 +6,7 @@ import { IconAddPlus, Modal } from '@components';
 import { T_Section, T_Link } from '@consts';
 
 import styles from './NewLinkButton.module.css';
+import { cleanupString, toTitleCase } from '@utils';
 
 const isValidUrl = (url: string) => {
     try {
@@ -55,7 +56,24 @@ export const NewLinkButton = (props: { sectionID: string }) => {
         };
 
         if (!newLink.name) {
-            newLink.name = new URL(newLink.url).hostname.trim();
+            const hostname = new URL(newLink.url).hostname;
+
+            const parts = hostname.split('.');
+
+            if (parts.length === 2) {
+                newLink.name = parts[0];
+            } else if (parts.length === 3) {
+                if (parts[0] === 'www') {
+                    newLink.name = parts[1];
+                } else {
+                    parts.pop();
+                    newLink.name = parts.join(' ');
+                }
+            } else {
+                newLink.name = hostname;
+            }
+
+            newLink.name = toTitleCase(cleanupString(newLink.name));
         }
 
         data.setStore(

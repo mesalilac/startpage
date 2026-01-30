@@ -10,3 +10,15 @@ export const generate_favicon_url = (url: string, size: number): string => {
 
     return `https://www.google.com/s2/favicons?sz=${size}&domain_url=${domain_url}`;
 };
+
+export const toTitleCase = (str: string) => {
+    return str
+        .toLowerCase()
+        .split(' ')
+        .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+        .join(' ');
+};
+
+export const cleanupString = (str: string) => {
+    return str.trim().replace('-', ' ').replace('_', ' ').replace('.', ' ');
+};
