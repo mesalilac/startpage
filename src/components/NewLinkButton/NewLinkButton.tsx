@@ -88,7 +88,6 @@ export const NewLinkButton = (props: { sectionID: string }) => {
                     placeholder='Name (optional)'
                     class={styles.NewLinkInput}
                     onChange={(e) => setNewLinkName(e.target.value)}
-                    ref={inputRef}
                 />
                 <input
                     type='text'
@@ -100,6 +99,7 @@ export const NewLinkButton = (props: { sectionID: string }) => {
                         styles.NewLinkInput
                     }
                     onChange={(e) => setNewLinkUrl(e.target.value)}
+                    ref={inputRef}
                 />
                 <input
                     type='text'
