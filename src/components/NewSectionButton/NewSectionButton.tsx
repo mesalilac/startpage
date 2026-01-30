@@ -24,7 +24,7 @@ export const NewSectionButton = () => {
 
         const newSection: T_Section = {
             id: nanoid(),
-            name: toTitleCase(cleanupString(newSectionName().trim())),
+            name: toTitleCase(cleanupString(newSectionName())),
             links: [],
         };
 

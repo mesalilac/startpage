@@ -18,7 +18,7 @@ const isValidUrl = (url: string) => {
 };
 
 const cleanupUrl = (url: string) => {
-    let currentUrl = url;
+    let currentUrl = url.trim();
 
     while (
         currentUrl.endsWith('/') &&
@@ -50,8 +50,8 @@ export const NewLinkButton = (props: { sectionID: string }) => {
 
         const newLink: T_Link = {
             id: nanoid(),
-            name: newLinkName().trim(),
-            url: cleanupUrl(newLinkUrl().trim()),
+            name: newLinkName(),
+            url: cleanupUrl(newLinkUrl()),
             description: newLinkDescription().trim(),
         };
 
