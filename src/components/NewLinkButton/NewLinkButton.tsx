@@ -72,9 +72,9 @@ export const NewLinkButton = (props: { sectionID: string }) => {
             } else {
                 newLink.name = hostname;
             }
-
-            newLink.name = toTitleCase(cleanupString(newLink.name));
         }
+
+        newLink.name = toTitleCase(cleanupString(newLink.name));
 
         data.setStore(
             'sections',
