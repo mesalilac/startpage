@@ -16,6 +16,16 @@ const isValidUrl = (url: string) => {
     }
 };
 
+const cleanupUrl = (url: string) => {
+    const currentUrl = new URL(url);
+
+    if (currentUrl.pathname.endsWith('/')) {
+        currentUrl.pathname = currentUrl.pathname.slice(0, -1);
+    }
+
+    return currentUrl.href;
+};
+
 export const NewLinkButton = (props: { sectionID: string }) => {
     const data = useData();
 
@@ -36,7 +46,7 @@ export const NewLinkButton = (props: { sectionID: string }) => {
         const newLink: T_Link = {
             id: nanoid(),
             name: newLinkName().trim(),
-            url: newLinkUrl().trim(),
+            url: cleanupUrl(newLinkUrl().trim()),
             description: newLinkDescription().trim(),
         };
 
