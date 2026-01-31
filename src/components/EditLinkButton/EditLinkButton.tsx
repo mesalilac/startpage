@@ -30,7 +30,7 @@ export const EditLinkButton = (props: {
     const [newLinkDescription, setNewLinkDescription] = createSignal('');
     const [urlInputError, setUrlInputError] = createSignal(false);
 
-    const handleCreateNewLink = () => {
+    const handleEditLink = () => {
         if (!newLinkUrl() || !isValidUrl(newLinkUrl())) {
             setUrlInputError(true);
             return;
@@ -90,10 +90,7 @@ export const EditLinkButton = (props: {
                 show={showModal()}
                 close={() => setShowModal(false)}
                 actionButton={
-                    <button
-                        class='button-primary'
-                        onClick={handleCreateNewLink}
-                    >
+                    <button class='button-primary' onClick={handleEditLink}>
                         Save
                     </button>
                 }
