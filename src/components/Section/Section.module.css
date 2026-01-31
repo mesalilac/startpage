@@ -16,6 +16,8 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    padding: var(--size-padding-xs);
+    min-height: 48px;
 }
 
 .SectionHeaderContainer p {
@@ -26,11 +28,13 @@
     display: flex;
     flex-direction: row;
     gap: var(--size-gap-lg);
+    align-items: center;
 }
 
 .SectionLinksContainer {
-    padding: var(--size-padding-xs);
+    padding: var(--size-padding-2xs);
     display: flex;
+    min-height: 50px;
     
     overflow-y: scroll;
     flex-direction: column;

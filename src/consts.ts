@@ -14,3 +14,14 @@ export type T_Section = {
 export type T_Data = {
     sections: T_Section[];
 };
+
+export type T_DraggableData =
+    | {
+          type: 'section';
+          data: T_Section;
+      }
+    | {
+          type: 'link';
+          data: T_Link;
+          parentSectionId: string;
+      };

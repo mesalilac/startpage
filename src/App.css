@@ -128,6 +128,15 @@ button:active {
     background-color: var(--color-button-secondary-active)
 }
 
+.drag-handler {
+    cursor: grab;
+    
+    background-color: hsl(from var(--color-button-bg) h s l / 20%);
+    color: var(--color-button-fg);
+    border-radius: var(--size-radius-button);
+    padding: var(--size-padding-2xs) var(--size-padding-xs);
+}
+
 .main-container {
     display: flex;
     flex-direction: column;

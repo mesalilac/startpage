@@ -24,6 +24,7 @@
     },
     "dependencies": {
         "@solid-primitives/clipboard": "^1.6.2",
+        "@thisbeyond/solid-dnd": "^0.7.5",
         "nanoid": "^5.1.6",
         "solid-js": "^1.9.5"
     }
