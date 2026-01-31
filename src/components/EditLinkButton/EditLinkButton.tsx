@@ -96,7 +96,7 @@ export const EditLinkButton = (props: {
                     </button>
                 }
             >
-                <p>Create new link</p>
+                <p>Edit link</p>
                 <input
                     type='text'
                     value={newLinkName()}
