@@ -22,3 +22,25 @@ export const toTitleCase = (str: string) => {
 export const cleanupString = (str: string) => {
     return str.trim().replace('-', ' ').replace('_', ' ').replace('.', ' ');
 };
+
+export const linkNameFromUrl = (url: string) => {
+    const hostname = new URL(url).hostname;
+    let name = url;
+
+    const parts = hostname.split('.');
+
+    if (parts.length === 2) {
+        name = parts[0];
+    } else if (parts.length === 3) {
+        if (parts[0] === 'www') {
+            name = parts[1];
+        } else {
+            parts.pop();
+            name = parts.join(' ');
+        }
+    } else {
+        name = hostname;
+    }
+
+    return toTitleCase(cleanupString(name));
+};

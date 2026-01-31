@@ -4,6 +4,7 @@ import { nanoid } from 'nanoid';
 
 import { IconEdit, Modal } from '@components';
 import { T_Section, T_Link } from '@consts';
+import { linkNameFromUrl } from '@utils';
 
 import styles from './EditLinkButton.module.css';
 
@@ -44,7 +45,7 @@ export const EditLinkButton = (props: {
         };
 
         if (!newLink.name) {
-            newLink.name = new URL(newLink.url).hostname.trim();
+            newLink.name = linkNameFromUrl(newLink.url);
         }
 
         data.setStore(
