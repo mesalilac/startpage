@@ -49,7 +49,7 @@ export const NewLinkButton = (props: { sectionID: string }) => {
         }
 
         const newLink: T_Link = {
-            id: nanoid(),
+            id: `Link-${nanoid()}`,
             name: newLinkName(),
             url: cleanupUrl(newLinkUrl()),
             description: newLinkDescription().trim(),

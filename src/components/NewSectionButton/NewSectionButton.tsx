@@ -23,7 +23,7 @@ export const NewSectionButton = () => {
         }
 
         const newSection: T_Section = {
-            id: nanoid(),
+            id: `Section-${nanoid()}`,
             name: toTitleCase(cleanupString(newSectionName())),
             links: [],
         };
