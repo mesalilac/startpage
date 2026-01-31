@@ -97,32 +97,43 @@ export const NewLinkButton = (props: { sectionID: string }) => {
                 }
             >
                 <p>Create new link</p>
-                <input
-                    type='text'
-                    value={newLinkName()}
-                    placeholder='Name (optional)'
-                    class={styles.NewLinkInput}
-                    onChange={(e) => setNewLinkName(e.target.value)}
-                />
-                <input
-                    type='text'
-                    value={newLinkUrl()}
-                    placeholder='Url'
-                    class={
-                        (urlInputError() ? 'input-error' : '') +
-                        ' ' +
-                        styles.NewLinkInput
-                    }
-                    onChange={(e) => setNewLinkUrl(e.target.value)}
-                    ref={inputRef}
-                />
-                <input
-                    type='text'
-                    value={newLinkDescription()}
-                    class={styles.NewLinkInput}
-                    placeholder='Description (optional)'
-                    onChange={(e) => setNewLinkDescription(e.target.value)}
-                />
+                <div class='input-clear-button'>
+                    <input
+                        type='text'
+                        value={newLinkName()}
+                        placeholder='Name (optional)'
+                        class={styles.NewLinkInput}
+                        onChange={(e) => setNewLinkName(e.target.value)}
+                    />
+                    <button onClick={() => setNewLinkName('')}>Clear</button>
+                </div>
+                <div class='input-clear-button'>
+                    <input
+                        type='text'
+                        value={newLinkUrl()}
+                        placeholder='Url'
+                        class={
+                            (urlInputError() ? 'input-error' : '') +
+                            ' ' +
+                            styles.NewLinkInput
+                        }
+                        onChange={(e) => setNewLinkUrl(e.target.value)}
+                        ref={inputRef}
+                    />
+                    <button onClick={() => setNewLinkUrl('')}>Clear</button>
+                </div>
+                <div class='input-clear-button'>
+                    <input
+                        type='text'
+                        value={newLinkDescription()}
+                        class={styles.NewLinkInput}
+                        placeholder='Description (optional)'
+                        onChange={(e) => setNewLinkDescription(e.target.value)}
+                    />
+                    <button onClick={() => setNewLinkDescription('')}>
+                        Clear
+                    </button>
+                </div>
             </Modal>
         </>
     );

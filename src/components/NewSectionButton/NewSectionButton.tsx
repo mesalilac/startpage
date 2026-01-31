@@ -64,14 +64,17 @@ export const NewSectionButton = () => {
                 }
             >
                 <p>Create new section</p>
-                <input
-                    type='text'
-                    value={newSectionName()}
-                    placeholder='Name'
-                    class={nameInputError() ? 'input-error' : ''}
-                    onChange={(e) => setNewSectionName(e.target.value)}
-                    ref={inputRef}
-                />
+                <div class='input-clear-button'>
+                    <input
+                        type='text'
+                        value={newSectionName()}
+                        placeholder='Name'
+                        class={nameInputError() ? 'input-error' : ''}
+                        onChange={(e) => setNewSectionName(e.target.value)}
+                        ref={inputRef}
+                    />
+                    <button onClick={() => setNewSectionName('')}>Clear</button>
+                </div>
             </Modal>
         </>
     );
