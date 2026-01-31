@@ -144,6 +144,12 @@ button:active {
     gap: var(--size-gap-lg);
 }
 
+.input-clear-button {
+    display: flex;
+    align-items: center;
+    gap: var(--size-gap-sm);
+}
+
 .divider {
     width: 100%;
     height: 2px;

@@ -61,17 +61,20 @@ export const EditSectionButton = (props: { sectionID: string }) => {
                 }
             >
                 <p>Edit section</p>
-                <input
-                    type='text'
-                    value={SectionName()}
-                    placeholder='Name'
-                    class={nameInputError() ? 'input-error' : ''}
-                    style={{
-                        width: '300px',
-                    }}
-                    onChange={(e) => setSectionName(e.target.value)}
-                    ref={inputRef}
-                />
+                <div class='input-clear-button'>
+                    <input
+                        type='text'
+                        value={SectionName()}
+                        placeholder='Name'
+                        class={nameInputError() ? 'input-error' : ''}
+                        style={{
+                            width: '300px',
+                        }}
+                        onChange={(e) => setSectionName(e.target.value)}
+                        ref={inputRef}
+                    />
+                    <button onClick={() => setSectionName('')}>Clear</button>
+                </div>
             </Modal>
         </>
     );
