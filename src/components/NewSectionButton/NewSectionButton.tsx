@@ -4,7 +4,7 @@ import { useData } from '@store';
 import { cleanupString, toTitleCase } from '@utils';
 import { nanoid } from 'nanoid';
 import { createEffect, createSignal } from 'solid-js';
-// import styles from './NewSectionButton.module.css';
+import './NewSectionButton.css';
 
 export const NewSectionButton = () => {
     const data = useData();

@@ -13,10 +13,9 @@
 
 body {
     line-height: 1.5;
-
     background-color: var(--color-app-bg);
     color: var(--color-app-fg);
-    font-family: "Inconsolata", monospace;
+    font-family: Inconsolata, monospace;
     font-optical-sizing: auto;
     font-weight: normal;
     font-style: normal;
@@ -56,7 +55,6 @@ input,
 textarea {
     border: var(--size-border-medium) solid var(--color-input-border);
     outline: none;
-
     background-color: var(--color-input-bg);
     color: var(--color-input-fg);
     border-radius: var(--size-radius-input);
@@ -95,7 +93,6 @@ button {
     gap: var(--size-gap-sm);
     cursor: pointer;
     border: none;
-
     background-color: var(--color-button-bg);
     color: var(--color-button-fg);
     border-radius: var(--size-radius-button);
@@ -113,7 +110,6 @@ button:active {
 .button-primary {
     cursor: pointer;
     border: none;
-
     background-color: var(--color-button-primary);
     color: var(--color-button-fg);
     border-radius: var(--size-radius-button);
@@ -131,7 +127,6 @@ button:active {
 .button-secondary {
     cursor: pointer;
     border: none;
-
     background-color: var(--color-button-secondary);
     color: var(--color-button-fg);
     border-radius: var(--size-radius-button);
@@ -148,7 +143,6 @@ button:active {
 
 .drag-handler {
     cursor: grab;
-
     background-color: hsl(from var(--color-button-bg) h s l / 20%);
     color: var(--color-button-fg);
     border-radius: var(--size-radius-button);

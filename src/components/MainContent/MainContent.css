@@ -1,4 +1,4 @@
-.mainContentContainer {
+.main-content-container {
     display: grid;
     grid-template-columns: repeat(
             auto-fit,

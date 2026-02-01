@@ -1,17 +1,15 @@
-.SectionContainer {
+.section-container {
     display: flex;
     flex-direction: column;
     gap: var(--size-gap-sm);
-
     width: 100%;
     max-height: var(--size-section-height);
-
     background-color: var(--color-surface-base);
     padding: var(--size-padding-sm);
     border-radius: var(--size-radius-card);
 }
 
-.SectionHeaderContainer {
+.section-header-container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -19,21 +17,20 @@
     min-height: 48px;
 }
 
-.SectionHeaderContainer p {
+.section-header-container p {
     font-weight: bold;
 }
 
-.SectionHeaderActions {
+.section-header-actions {
     display: flex;
     flex-direction: row;
     gap: var(--size-gap-lg);
     align-items: center;
 }
 
-.SectionLinksContainer {
+.section-links-container {
     display: flex;
     min-height: 50px;
-
     overflow-y: scroll;
     flex-direction: column;
     gap: var(--size-gap-xs);

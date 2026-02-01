@@ -4,12 +4,12 @@ import { useData } from '@store';
 import { createSortable, SortableProvider } from '@thisbeyond/solid-dnd';
 import { createMemo, For, Show } from 'solid-js';
 
-import styles from './Section.module.css';
+import './Section.css';
 
 export const SectionOverlay = (props: { section: Tsection }) => {
     return (
         <div
-            class={styles.SectionContainer}
+            class='section-container'
             style={{
                 'background-color':
                     'hsl(from var(--color-surface-base) h s l / 80%)',
@@ -17,8 +17,8 @@ export const SectionOverlay = (props: { section: Tsection }) => {
                 'pointer-events': 'none',
             }}
         >
-            <div class={styles.SectionHeaderContainer}>
-                <div class={styles.SectionHeaderActions}>
+            <div class='section-header-container'>
+                <div class='section-header-actions'>
                     <span class='drag-handler'>⠿</span>
                     <p>{props.section.name}</p>
                 </div>
@@ -57,7 +57,7 @@ export const Section = (props: { section: Tsection }) => {
 
     return (
         <div
-            class={styles.SectionContainer}
+            class='section-container'
             ref={sortable.ref}
             style={{
                 transform: `translate3d(${sortable.transform.x}px, ${sortable.transform.y}px, 0)`,
@@ -70,8 +70,8 @@ export const Section = (props: { section: Tsection }) => {
                 'pointer-events': sortable.isActiveDraggable ? 'none' : 'auto',
             }}
         >
-            <div class={styles.SectionHeaderContainer}>
-                <div class={styles.SectionHeaderActions}>
+            <div class='section-header-container'>
+                <div class='section-header-actions'>
                     <Show when={data.editMode()}>
                         <span class='drag-handler' {...sortable.dragActivators}>
                             ⠿
@@ -79,7 +79,7 @@ export const Section = (props: { section: Tsection }) => {
                     </Show>
                     <p>{props.section.name}</p>
                 </div>
-                <div class={styles.SectionHeaderActions}>
+                <div class='section-header-actions'>
                     <Show when={data.editMode()}>
                         <EditSectionButton sectionId={props.section.id} />
                         <IconTrash onClick={handleRemoveSection} />
@@ -89,7 +89,7 @@ export const Section = (props: { section: Tsection }) => {
             </div>
             <div class='divider' />
 
-            <div class={styles.SectionLinksContainer}>
+            <div class='section-links-container'>
                 <SortableProvider ids={props.section.links.map((l) => l.id)}>
                     <For each={props.section.links}>
                         {(link) => (

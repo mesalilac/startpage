@@ -5,7 +5,7 @@ import { linkNameFromUrl } from '@utils';
 import { nanoid } from 'nanoid';
 import { createEffect, createSignal } from 'solid-js';
 
-import styles from './EditLinkButton.module.css';
+import './EditLinkButton.css';
 
 const isValidUrl = (url: string) => {
     try {
@@ -102,7 +102,7 @@ export const EditLinkButton = (props: {
                 <p>Edit link</p>
                 <div class='input-clear-button'>
                     <input
-                        class={styles.NewLinkInput}
+                        class='new-link-input'
                         onChange={(e) => setNewLinkName(e.target.value)}
                         placeholder='Name (optional)'
                         ref={inputRef}
@@ -118,7 +118,7 @@ export const EditLinkButton = (props: {
                         class={
                             (urlInputError() ? 'input-error' : '') +
                             ' ' +
-                            styles.NewLinkInput
+                            'new-link-input'
                         }
                         onChange={(e) => setNewLinkUrl(e.target.value)}
                         placeholder='Url'
@@ -131,7 +131,7 @@ export const EditLinkButton = (props: {
                 </div>
                 <div class='input-clear-button'>
                     <input
-                        class={styles.NewLinkInput}
+                        class='new-link-input'
                         onChange={(e) => setNewLinkDescription(e.target.value)}
                         placeholder='Description (optional)'
                         type='text'

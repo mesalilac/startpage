@@ -3,7 +3,7 @@ import { writeClipboard } from '@solid-primitives/clipboard';
 import { useData } from '@store';
 import { createMemo, createSignal, onCleanup, onMount } from 'solid-js';
 
-import styles from './Nav.module.css';
+import './Nav.css';
 
 export const Nav = () => {
     const data = useData();
@@ -43,9 +43,9 @@ export const Nav = () => {
     };
 
     return (
-        <div class={styles.navContainer}>
+        <div class='nav-container'>
             <p>{formattedDate()}</p>
-            <div class={styles.navActions}>
+            <div class='nav-actions'>
                 <NewSectionButton />
                 <button
                     class='button-secondary'

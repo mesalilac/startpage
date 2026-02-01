@@ -3,7 +3,7 @@ import type { JSX } from 'solid-js';
 import { onCleanup, onMount, Show } from 'solid-js';
 import { Portal } from 'solid-js/web';
 
-import styles from './Modal.module.css';
+import './Modal.css';
 
 export const Modal = (props: {
     show: boolean;
@@ -30,18 +30,14 @@ export const Modal = (props: {
     return (
         <Show when={props.show}>
             <Portal>
-                <div
-                    class={styles.ModalContainer}
-                    onClick={props.close}
-                    role='none'
-                >
+                <div class='modal-container' onClick={props.close} role='none'>
                     <div
-                        class={styles.ModalBody}
+                        class='modal-body'
                         onClick={(e) => e.stopPropagation()}
                         role='none'
                     >
                         {props.children}
-                        <div class={styles.ModalActions}>
+                        <div class='modal-actions'>
                             {props.actionButton}
                             <button onClick={props.close} type='button'>
                                 Close

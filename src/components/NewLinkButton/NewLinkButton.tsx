@@ -4,7 +4,7 @@ import { useData } from '@store';
 import { linkNameFromUrl } from '@utils';
 import { nanoid } from 'nanoid';
 import { createEffect, createSignal } from 'solid-js';
-import styles from './NewLinkButton.module.css';
+import './NewLinkButton.css';
 
 const isValidUrl = (url: string) => {
     try {
@@ -98,7 +98,7 @@ export const NewLinkButton = (props: { sectionId: string }) => {
                 <p>Create new link</p>
                 <div class='input-clear-button'>
                     <input
-                        class={styles.NewLinkInput}
+                        class='new-link-input'
                         onChange={(e) => setNewLinkName(e.target.value)}
                         placeholder='Name (optional)'
                         type='text'
@@ -113,7 +113,7 @@ export const NewLinkButton = (props: { sectionId: string }) => {
                         class={
                             (urlInputError() ? 'input-error' : '') +
                             ' ' +
-                            styles.NewLinkInput
+                            'new-link-input'
                         }
                         onChange={(e) => setNewLinkUrl(e.target.value)}
                         placeholder='Url'
@@ -127,7 +127,7 @@ export const NewLinkButton = (props: { sectionId: string }) => {
                 </div>
                 <div class='input-clear-button'>
                     <input
-                        class={styles.NewLinkInput}
+                        class='new-link-input'
                         onChange={(e) => setNewLinkDescription(e.target.value)}
                         placeholder='Description (optional)'
                         type='text'

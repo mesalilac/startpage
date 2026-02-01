@@ -10,7 +10,7 @@ import {
     SortableProvider,
 } from '@thisbeyond/solid-dnd';
 import { For } from 'solid-js';
-import styles from './MainContent.module.css';
+import './MainContent.css';
 
 export const MainContent = () => {
     const data = useData();
@@ -121,7 +121,7 @@ export const MainContent = () => {
             onDragStart={handleDragStart}
         >
             <DragDropSensors />
-            <div class={styles.mainContentContainer}>
+            <div class='main-content-container'>
                 <SortableProvider ids={data.store.sections.map((s) => s.id)}>
                     <For each={data.store.sections}>
                         {(section) => <Section section={section} />}

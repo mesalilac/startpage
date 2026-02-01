@@ -5,7 +5,7 @@ import { createSortable } from '@thisbeyond/solid-dnd';
 import { generateFaviconUrl } from '@utils';
 import type { JSX } from 'solid-js';
 import { createMemo, Show } from 'solid-js';
-import styles from './Link.module.css';
+import './Link.css';
 
 export const LinkOverlay = (props: { sectionId: string; link: Tlink }) => {
     const faviconUrl = createMemo(() => {
@@ -26,7 +26,7 @@ export const LinkOverlay = (props: { sectionId: string; link: Tlink }) => {
 
     return (
         <div
-            class={styles.LinkContainer}
+            class='link-container'
             style={{
                 'background-color':
                     'hsl(from var(--color-surface-base) h s l / 80%)',
@@ -35,9 +35,9 @@ export const LinkOverlay = (props: { sectionId: string; link: Tlink }) => {
             }}
             title={props.link.description}
         >
-            <div class={styles.LinkActions}>
+            <div class='link-actions'>
                 <span class='drag-handler'>⠿</span>
-                <a class={styles.LinkIconName} href={props.link.url}>
+                <a class='link-icon-name' href={props.link.url}>
                     <img
                         alt='Favicon'
                         onError={handleImgError}
@@ -86,7 +86,7 @@ export const Link = (props: { sectionId: string; link: Tlink }) => {
 
     return (
         <div
-            class={styles.LinkContainer}
+            class='link-container'
             ref={sortable.ref}
             style={{
                 transform: `translate3d(${sortable.transform.x}px, ${sortable.transform.y}px, 0)`,
@@ -102,13 +102,13 @@ export const Link = (props: { sectionId: string; link: Tlink }) => {
             }}
             title={props.link.description}
         >
-            <div class={styles.LinkActions}>
+            <div class='link-actions'>
                 <Show when={data.editMode()}>
                     <span class='drag-handler' {...sortable.dragActivators}>
                         ⠿
                     </span>
                 </Show>
-                <a class={styles.LinkIconName} href={props.link.url}>
+                <a class='link-icon-name' href={props.link.url}>
                     <img
                         alt='Favicon'
                         onError={handleImgError}
@@ -119,7 +119,7 @@ export const Link = (props: { sectionId: string; link: Tlink }) => {
             </div>
 
             <Show when={data.editMode()}>
-                <div class={styles.LinkActions}>
+                <div class='link-actions'>
                     <EditLinkButton
                         linkId={props.link.id}
                         sectionId={props.sectionId}

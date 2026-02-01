@@ -1,5 +1,5 @@
 import { createSignal } from 'solid-js';
-// import styles from './DelayedTextButton.module.css';
+// import './DelayedTextButton.css';
 
 export const DelayedTextButton = (props: {
     text: string;

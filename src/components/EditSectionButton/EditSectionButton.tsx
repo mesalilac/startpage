@@ -1,7 +1,7 @@
 import { IconEdit, Modal } from '@components';
 import { useData } from '@store';
 import { createEffect, createSignal } from 'solid-js';
-// import styles from './EditSectionButton.module.css';
+// import './EditSectionButton.css';
 
 export const EditSectionButton = (props: { sectionId: string }) => {
     const data = useData();

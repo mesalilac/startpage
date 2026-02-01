@@ -7,7 +7,6 @@
     flex-direction: row;
     gap: var(--default-gap);
     align-items: center;
-    flex-wrap: wrap;
 }
 
 .flex-column {
@@ -27,12 +26,15 @@
 .justify-between {
     justify-content: space-between;
 }
+
 .justify-center {
     justify-content: center;
 }
+
 .justify-end {
     justify-content: flex-end;
 }
+
 .justify-start {
     justify-content: flex-start;
 }
@@ -40,9 +42,11 @@
 .align-start {
     align-items: start;
 }
+
 .align-stretch {
     align-items: stretch;
 }
+
 .align-baseline {
     align-items: baseline;
 }
