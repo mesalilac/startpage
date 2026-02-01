@@ -95,9 +95,9 @@ export const Link = (props: { sectionId: string; link: Tlink }) => {
                     : 'transform 0.2s ease',
                 'z-index': sortable.isActiveDraggable ? 1 : 0,
                 opacity: sortable.isActiveDraggable ? 0.5 : 1,
-                outline: sortable.isActiveDraggable
+                border: sortable.isActiveDraggable
                     ? 'var(--size-border-medium) dashed var(--color-button-primary)'
-                    : '',
+                    : 'var(--size-border-medium) dashed transparent',
                 'pointer-events': sortable.isActiveDraggable ? 'none' : 'auto',
             }}
             title={props.link.description}
