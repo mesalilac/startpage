@@ -1,5 +1,5 @@
 :root {
-    --default-gap: var(--size-gap-md);
+    --default-gap: var(--size-gap-lg);
 }
 
 .flex-row {
