@@ -1,5 +1,8 @@
 .mainContentContainer {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(var(--size-section-width), 1fr));
+    grid-template-columns: repeat(
+            auto-fit,
+            minmax(var(--size-section-width), 1fr)
+        );
     gap: var(--size-gap-lg);
 }

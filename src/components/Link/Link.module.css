@@ -29,6 +29,6 @@
     text-overflow: ellipsis;
 }
 
-.LinkIconName:hover{
+.LinkIconName:hover {
     color: var(--color-accent-base);
 }

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap");
 
 * {
     min-width: 0;
@@ -22,11 +22,20 @@ body {
     font-style: normal;
 }
 
-input, button, textarea, select {
+input,
+button,
+textarea,
+select {
     font: inherit;
 }
 
-p, h1, h2, h3, h4, h5, h6 {
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     overflow-wrap: break-word;
 }
 
@@ -34,29 +43,38 @@ p {
     text-wrap: pretty;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     text-wrap: balance;
 }
 
-input, textarea {
+input,
+textarea {
     border: var(--size-border-medium) solid var(--color-input-border);
     outline: none;
-    
+
     background-color: var(--color-input-bg);
     color: var(--color-input-fg);
     border-radius: var(--size-radius-input);
     padding: var(--size-padding-2xs) var(--size-padding-md);
 }
 
-input:hover, textarea:hover {
+input:hover,
+textarea:hover {
     background-color: hsl(from var(--color-input-bg-hover) h s l / 20%);
 }
 
-input:focus, textarea:focus {
+input:focus,
+textarea:focus {
     border-color: var(--color-input-border-focus);
 }
 
-input::placeholder, textarea::placeholder {
+input::placeholder,
+textarea::placeholder {
     color: var(--color-input-placeholder);
 }
 
@@ -77,7 +95,7 @@ button {
     gap: var(--size-gap-sm);
     cursor: pointer;
     border: none;
-    
+
     background-color: var(--color-button-bg);
     color: var(--color-button-fg);
     border-radius: var(--size-radius-button);
@@ -89,13 +107,13 @@ button:hover {
 }
 
 button:active {
-    background-color: var(--color-button-bg-active)
+    background-color: var(--color-button-bg-active);
 }
 
 .button-primary {
     cursor: pointer;
     border: none;
-    
+
     background-color: var(--color-button-primary);
     color: var(--color-button-fg);
     border-radius: var(--size-radius-button);
@@ -107,13 +125,13 @@ button:active {
 }
 
 .button-primary:active {
-    background-color: var(--color-button-primary-active)
+    background-color: var(--color-button-primary-active);
 }
 
 .button-secondary {
     cursor: pointer;
     border: none;
-    
+
     background-color: var(--color-button-secondary);
     color: var(--color-button-fg);
     border-radius: var(--size-radius-button);
@@ -125,12 +143,12 @@ button:active {
 }
 
 .button-secondary:active {
-    background-color: var(--color-button-secondary-active)
+    background-color: var(--color-button-secondary-active);
 }
 
 .drag-handler {
     cursor: grab;
-    
+
     background-color: hsl(from var(--color-button-bg) h s l / 20%);
     color: var(--color-button-fg);
     border-radius: var(--size-radius-button);
