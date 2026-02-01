@@ -1,10 +1,9 @@
-import { useData } from '@store';
-import { createSignal, createEffect } from 'solid-js';
-import { nanoid } from 'nanoid';
-
 import { IconEdit, Modal } from '@components';
-import { T_Section, T_Link } from '@consts';
+import type { Tlink } from '@consts';
+import { useData } from '@store';
 import { linkNameFromUrl } from '@utils';
+import { nanoid } from 'nanoid';
+import { createEffect, createSignal } from 'solid-js';
 
 import styles from './EditLinkButton.module.css';
 
@@ -18,8 +17,8 @@ const isValidUrl = (url: string) => {
 };
 
 export const EditLinkButton = (props: {
-    sectionID: string;
-    linkID: string;
+    sectionId: string;
+    linkId: string;
 }) => {
     const data = useData();
 
@@ -37,7 +36,7 @@ export const EditLinkButton = (props: {
             return;
         }
 
-        const newLink: T_Link = {
+        const newLink: Tlink = {
             id: nanoid(),
             name: newLinkName().trim(),
             url: newLinkUrl().trim(),
@@ -50,9 +49,9 @@ export const EditLinkButton = (props: {
 
         data.setStore(
             'sections',
-            (section) => section.id === props.sectionID,
+            (section) => section.id === props.sectionId,
             'links',
-            (link) => link.id === props.linkID,
+            (link) => link.id === props.linkId,
             newLink,
         );
 
@@ -63,11 +62,11 @@ export const EditLinkButton = (props: {
         if (showModal()) {
             inputRef?.focus();
             const section = data.store.sections.find(
-                (x) => x.id === props.sectionID,
+                (x) => x.id === props.sectionId,
             );
 
             if (section) {
-                const link = section.links.find((x) => x.id === props.linkID);
+                const link = section.links.find((x) => x.id === props.linkId);
 
                 if (link) {
                     setNewLinkName(link.name);
@@ -88,49 +87,60 @@ export const EditLinkButton = (props: {
             <IconEdit onClick={() => setShowModal(true)} />
 
             <Modal
-                show={showModal()}
-                close={() => setShowModal(false)}
                 actionButton={
-                    <button class='button-primary' onClick={handleEditLink}>
+                    <button
+                        class='button-primary'
+                        onClick={handleEditLink}
+                        type='button'
+                    >
                         Save
                     </button>
                 }
+                close={() => setShowModal(false)}
+                show={showModal()}
             >
                 <p>Edit link</p>
                 <div class='input-clear-button'>
                     <input
-                        type='text'
-                        value={newLinkName()}
-                        placeholder='Name (optional)'
                         class={styles.NewLinkInput}
                         onChange={(e) => setNewLinkName(e.target.value)}
+                        placeholder='Name (optional)'
                         ref={inputRef}
+                        type='text'
+                        value={newLinkName()}
                     />
-                    <button onClick={() => setNewLinkName('')}>Clear</button>
+                    <button onClick={() => setNewLinkName('')} type='button'>
+                        Clear
+                    </button>
                 </div>
                 <div class='input-clear-button'>
                     <input
-                        type='text'
-                        value={newLinkUrl()}
-                        placeholder='Url'
                         class={
                             (urlInputError() ? 'input-error' : '') +
                             ' ' +
                             styles.NewLinkInput
                         }
                         onChange={(e) => setNewLinkUrl(e.target.value)}
+                        placeholder='Url'
+                        type='text'
+                        value={newLinkUrl()}
                     />
-                    <button onClick={() => setNewLinkUrl('')}>Clear</button>
+                    <button onClick={() => setNewLinkUrl('')} type='button'>
+                        Clear
+                    </button>
                 </div>
                 <div class='input-clear-button'>
                     <input
+                        class={styles.NewLinkInput}
+                        onChange={(e) => setNewLinkDescription(e.target.value)}
+                        placeholder='Description (optional)'
                         type='text'
                         value={newLinkDescription()}
-                        class={styles.NewLinkInput}
-                        placeholder='Description (optional)'
-                        onChange={(e) => setNewLinkDescription(e.target.value)}
                     />
-                    <button onClick={() => setNewLinkDescription('')}>
+                    <button
+                        onClick={() => setNewLinkDescription('')}
+                        type='button'
+                    >
                         Clear
                     </button>
                 </div>

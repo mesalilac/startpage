@@ -1,12 +1,9 @@
+import { IconEdit, Modal } from '@components';
 import { useData } from '@store';
-import { createSignal, createEffect } from 'solid-js';
-import { nanoid } from 'nanoid';
+import { createEffect, createSignal } from 'solid-js';
+// import styles from './EditSectionButton.module.css';
 
-import { Modal, IconEdit } from '@components';
-import { T_Section, T_Link } from '@consts';
-import styles from './EditSectionButton.module.css';
-
-export const EditSectionButton = (props: { sectionID: string }) => {
+export const EditSectionButton = (props: { sectionId: string }) => {
     const data = useData();
 
     let inputRef: HTMLInputElement | undefined;
@@ -23,7 +20,7 @@ export const EditSectionButton = (props: { sectionID: string }) => {
 
         data.setStore(
             'sections',
-            (x) => x.id === props.sectionID,
+            (x) => x.id === props.sectionId,
             'name',
             SectionName().trim(),
         );
@@ -35,7 +32,7 @@ export const EditSectionButton = (props: { sectionID: string }) => {
         if (showModal()) {
             inputRef?.focus();
             const section = data.store.sections.find(
-                (x) => x.id === props.sectionID,
+                (x) => x.id === props.sectionId,
             );
 
             if (section) {
@@ -52,28 +49,34 @@ export const EditSectionButton = (props: { sectionID: string }) => {
             <IconEdit onClick={() => setShowModal(true)} />
 
             <Modal
-                show={showModal()}
-                close={() => setShowModal(false)}
                 actionButton={
-                    <button class='button-primary' onClick={handleEditSection}>
+                    <button
+                        class='button-primary'
+                        onClick={handleEditSection}
+                        type='button'
+                    >
                         Save
                     </button>
                 }
+                close={() => setShowModal(false)}
+                show={showModal()}
             >
                 <p>Edit section</p>
                 <div class='input-clear-button'>
                     <input
-                        type='text'
-                        value={SectionName()}
-                        placeholder='Name'
                         class={nameInputError() ? 'input-error' : ''}
+                        onChange={(e) => setSectionName(e.target.value)}
+                        placeholder='Name'
+                        ref={inputRef}
                         style={{
                             width: '300px',
                         }}
-                        onChange={(e) => setSectionName(e.target.value)}
-                        ref={inputRef}
+                        type='text'
+                        value={SectionName()}
                     />
-                    <button onClick={() => setSectionName('')}>Clear</button>
+                    <button onClick={() => setSectionName('')} type='button'>
+                        Clear
+                    </button>
                 </div>
             </Modal>
         </>

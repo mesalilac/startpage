@@ -1,7 +1,7 @@
-import { createSignal, onMount, onCleanup, createMemo } from 'solid-js';
-import { useData } from '@store';
-import { Modal, DelayedTextButton, NewSectionButton } from '@components';
+import { DelayedTextButton, Modal, NewSectionButton } from '@components';
 import { writeClipboard } from '@solid-primitives/clipboard';
+import { useData } from '@store';
+import { createMemo, createSignal, onCleanup, onMount } from 'solid-js';
 
 import styles from './Nav.module.css';
 
@@ -47,30 +47,36 @@ export const Nav = () => {
             <p>{formattedDate()}</p>
             <div class={styles.navActions}>
                 <NewSectionButton />
-                <button class='button-secondary' onClick={toggleEditMode}>
+                <button
+                    class='button-secondary'
+                    onClick={toggleEditMode}
+                    type='button'
+                >
                     {data.editMode() ? 'Done' : 'Edit mode'}
                 </button>
-                <button onClick={() => setShowExportModal(true)}>Export</button>
+                <button onClick={() => setShowExportModal(true)} type='button'>
+                    Export
+                </button>
                 <Modal
-                    show={showExportModal()}
-                    close={() => setShowExportModal(false)}
                     actionButton={
                         <DelayedTextButton
-                            text='Copy'
                             altText='Copied!'
                             class='button-primary'
                             onClick={handleCopyJsonData}
+                            text='Copy'
                         />
                     }
+                    close={() => setShowExportModal(false)}
+                    show={showExportModal()}
                 >
                     <textarea
+                        onClick={(e) => e.currentTarget.select()}
+                        readOnly={true}
                         style={{
                             width: '800px',
                             height: '600px',
                             resize: 'none',
                         }}
-                        readOnly={true}
-                        onClick={(e) => e.currentTarget.select()}
                     >
                         {formattedJsonData()}
                     </textarea>

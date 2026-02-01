@@ -1,14 +1,14 @@
-export const generate_favicon_url = (url: string, size: number): string => {
+export const generateFaviconUrl = (url: string, size: number): string => {
     const domain = new URL(url);
-    const tmp_list = domain.hostname.split('.');
+    const tmpList = domain.hostname.split('.');
 
-    if (tmp_list.length === 3) {
-        tmp_list.shift();
+    if (tmpList.length === 3) {
+        tmpList.shift();
     }
 
-    const domain_url = tmp_list.join('.');
+    const domainUrl = tmpList.join('.');
 
-    return `https://www.google.com/s2/favicons?sz=${size}&domain_url=${domain_url}`;
+    return `https://www.google.com/s2/favicons?sz=${size}&domain_url=${domainUrl}`;
 };
 
 export const toTitleCase = (str: string) => {

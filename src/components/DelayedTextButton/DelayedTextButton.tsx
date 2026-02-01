@@ -1,5 +1,5 @@
 import { createSignal } from 'solid-js';
-import styles from './DelayedTextButton.module.css';
+// import styles from './DelayedTextButton.module.css';
 
 export const DelayedTextButton = (props: {
     text: string;
@@ -18,7 +18,7 @@ export const DelayedTextButton = (props: {
     };
 
     return (
-        <button class={props.class} onClick={handleButtonClick}>
+        <button class={props.class} onClick={handleButtonClick} type='button'>
             {buttonText()}
         </button>
     );

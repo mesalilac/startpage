@@ -1,41 +1,47 @@
-import { useData } from '@store';
-
-import { createMemo, Show, JSX } from 'solid-js';
-import { T_DraggableData, T_Link } from '@consts';
 import { EditLinkButton, IconTrash } from '@components';
-import { generate_favicon_url } from '@utils';
-import styles from './Link.module.css';
+import type { TdraggableData, Tlink } from '@consts';
+import { useData } from '@store';
 import { createSortable } from '@thisbeyond/solid-dnd';
+import { generateFaviconUrl } from '@utils';
+import type { JSX } from 'solid-js';
+import { createMemo, Show } from 'solid-js';
+import styles from './Link.module.css';
 
-export const LinkOverlay = (props: { sectionID: string; link: T_Link }) => {
+export const LinkOverlay = (props: { sectionId: string; link: Tlink }) => {
     const faviconUrl = createMemo(() => {
         const url = new URL(props.link.url);
         return `./favicon/${url.hostname}.png`;
     });
 
     const faviconFallbackUrl = createMemo(() => {
-        return generate_favicon_url(props.link.url, 16);
+        return generateFaviconUrl(props.link.url, 16);
     });
+
+    const handleImgError: JSX.EventHandlerUnion<
+        HTMLImageElement,
+        ErrorEvent
+    > = (e) => {
+        e.currentTarget.src = faviconFallbackUrl();
+    };
 
     return (
         <div
             class={styles.LinkContainer}
-            title={props.link.description}
             style={{
                 'background-color':
                     'hsl(from var(--color-surface-base) h s l / 80%)',
                 'backdrop-filter': 'blur(2px)',
                 'pointer-events': 'none',
             }}
+            title={props.link.description}
         >
             <div class={styles.LinkActions}>
                 <span class='drag-handler'>⠿</span>
                 <a class={styles.LinkIconName} href={props.link.url}>
                     <img
+                        alt='Favicon'
+                        onError={handleImgError}
                         src={faviconUrl()}
-                        onError={(e) =>
-                            (e.currentTarget.src = faviconFallbackUrl())
-                        }
                     />
                     <p>{props.link.name}</p>
                 </a>
@@ -44,19 +50,19 @@ export const LinkOverlay = (props: { sectionID: string; link: T_Link }) => {
     );
 };
 
-export const Link = (props: { sectionID: string; link: T_Link }) => {
+export const Link = (props: { sectionId: string; link: Tlink }) => {
     const data = useData();
 
     const sortable = createSortable(props.link.id, {
         type: 'link',
         data: props.link,
-        parentSectionId: props.sectionID,
-    } as T_DraggableData);
+        parentSectionId: props.sectionId,
+    } as TdraggableData);
 
     const handleRemoveLink = () => {
         data.setStore(
             'sections',
-            (section) => section.id === props.sectionID,
+            (section) => section.id === props.sectionId,
             'links',
             (links) => links.filter((link) => link.id !== props.link.id),
         );
@@ -68,14 +74,20 @@ export const Link = (props: { sectionID: string; link: T_Link }) => {
     });
 
     const faviconFallbackUrl = createMemo(() => {
-        return generate_favicon_url(props.link.url, 16);
+        return generateFaviconUrl(props.link.url, 16);
     });
+
+    const handleImgError: JSX.EventHandlerUnion<
+        HTMLImageElement,
+        ErrorEvent
+    > = (e) => {
+        e.currentTarget.src = faviconFallbackUrl();
+    };
 
     return (
         <div
-            ref={sortable.ref}
             class={styles.LinkContainer}
-            title={props.link.description}
+            ref={sortable.ref}
             style={{
                 transform: `translate3d(${sortable.transform.x}px, ${sortable.transform.y}px, 0)`,
                 transition: sortable.isActiveDraggable
@@ -88,6 +100,7 @@ export const Link = (props: { sectionID: string; link: T_Link }) => {
                     : '',
                 'pointer-events': sortable.isActiveDraggable ? 'none' : 'auto',
             }}
+            title={props.link.description}
         >
             <div class={styles.LinkActions}>
                 <Show when={data.editMode()}>
@@ -97,10 +110,9 @@ export const Link = (props: { sectionID: string; link: T_Link }) => {
                 </Show>
                 <a class={styles.LinkIconName} href={props.link.url}>
                     <img
+                        alt='Favicon'
+                        onError={handleImgError}
                         src={faviconUrl()}
-                        onError={(e) =>
-                            (e.currentTarget.src = faviconFallbackUrl())
-                        }
                     />
                     <p>{props.link.name}</p>
                 </a>
@@ -109,8 +121,8 @@ export const Link = (props: { sectionID: string; link: T_Link }) => {
             <Show when={data.editMode()}>
                 <div class={styles.LinkActions}>
                     <EditLinkButton
-                        sectionID={props.sectionID}
-                        linkID={props.link.id}
+                        linkId={props.link.id}
+                        sectionId={props.sectionId}
                     />
                     <IconTrash onClick={handleRemoveLink} />
                 </div>

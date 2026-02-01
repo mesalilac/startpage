@@ -1,27 +1,21 @@
-import {
-    createSignal,
-    Accessor,
-    Setter,
-    JSX,
-    createContext,
-    useContext,
-} from 'solid-js';
-import { createStore, SetStoreFunction } from 'solid-js/store';
-import type { T_Data, T_DraggableData } from './consts';
+import type { Accessor, JSX, Setter } from 'solid-js';
 
-import data_json from '../public/data.json';
-import { Id } from '@thisbeyond/solid-dnd';
+import { createContext, createSignal, useContext } from 'solid-js';
+import type { SetStoreFunction } from 'solid-js/store';
+import { createStore } from 'solid-js/store';
 
-type T_ActiveOver = {
-    source: T_DraggableData;
-    dest: T_DraggableData;
+import dataJson from '../public/data.json';
+import type { Tdata, TdraggableData } from './consts';
+
+type TactiveOver = {
+    source: TdraggableData;
+    dest: TdraggableData;
 } | null;
 
 const createDataStore = () => {
-    const [store, setStore] = createStore<T_Data>(data_json);
+    const [store, setStore] = createStore<Tdata>(dataJson);
     const [editMode, setEditMode] = createSignal(false);
-    const [dragHoverState, setDragHoverState] =
-        createSignal<T_ActiveOver>(null);
+    const [dragHoverState, setDragHoverState] = createSignal<TactiveOver>(null);
 
     return {
         editMode: editMode,
@@ -36,10 +30,10 @@ const createDataStore = () => {
 const AppContext = createContext<{
     editMode: Accessor<boolean>;
     setEditMode: Setter<boolean>;
-    dragHoverState: Accessor<T_ActiveOver>;
-    setDragHoverState: Setter<T_ActiveOver>;
-    store: T_Data;
-    setStore: SetStoreFunction<T_Data>;
+    dragHoverState: Accessor<TactiveOver>;
+    setDragHoverState: Setter<TactiveOver>;
+    store: Tdata;
+    setStore: SetStoreFunction<Tdata>;
 }>();
 
 export const useData = () => {

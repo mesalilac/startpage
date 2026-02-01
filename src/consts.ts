@@ -1,27 +1,27 @@
-export type T_Link = {
+export type Tlink = {
     id: string;
     name: string;
     url: string;
     description: string;
 };
 
-export type T_Section = {
+export type Tsection = {
     id: string;
     name: string;
-    links: T_Link[];
+    links: Tlink[];
 };
 
-export type T_Data = {
-    sections: T_Section[];
+export type Tdata = {
+    sections: Tsection[];
 };
 
-export type T_DraggableData =
+export type TdraggableData =
     | {
           type: 'section';
-          data: T_Section;
+          data: Tsection;
       }
     | {
           type: 'link';
-          data: T_Link;
+          data: Tlink;
           parentSectionId: string;
       };

@@ -1,11 +1,10 @@
-import { useData } from '@store';
-import { createSignal, createEffect } from 'solid-js';
-import { nanoid } from 'nanoid';
-
 import { IconAddPlus, Modal } from '@components';
-import { T_Section, T_Link } from '@consts';
+import type { Tsection } from '@consts';
+import { useData } from '@store';
 import { cleanupString, toTitleCase } from '@utils';
-import styles from './NewSectionButton.module.css';
+import { nanoid } from 'nanoid';
+import { createEffect, createSignal } from 'solid-js';
+// import styles from './NewSectionButton.module.css';
 
 export const NewSectionButton = () => {
     const data = useData();
@@ -22,7 +21,7 @@ export const NewSectionButton = () => {
             return;
         }
 
-        const newSection: T_Section = {
+        const newSection: Tsection = {
             id: `Section-${nanoid()}`,
             name: toTitleCase(cleanupString(newSectionName())),
             links: [],
@@ -47,33 +46,40 @@ export const NewSectionButton = () => {
 
     return (
         <>
-            <button class='button-primary' onClick={() => setShowModal(true)}>
+            <button
+                class='button-primary'
+                onClick={() => setShowModal(true)}
+                type='button'
+            >
                 <IconAddPlus class='icon-add-section' /> New section
             </button>
 
             <Modal
-                show={showModal()}
-                close={() => setShowModal(false)}
                 actionButton={
                     <button
                         class='button-primary'
                         onClick={handleCreateNewSection}
+                        type='button'
                     >
                         Create
                     </button>
                 }
+                close={() => setShowModal(false)}
+                show={showModal()}
             >
                 <p>Create new section</p>
                 <div class='input-clear-button'>
                     <input
-                        type='text'
-                        value={newSectionName()}
-                        placeholder='Name'
                         class={nameInputError() ? 'input-error' : ''}
                         onChange={(e) => setNewSectionName(e.target.value)}
+                        placeholder='Name'
                         ref={inputRef}
+                        type='text'
+                        value={newSectionName()}
                     />
-                    <button onClick={() => setNewSectionName('')}>Clear</button>
+                    <button onClick={() => setNewSectionName('')} type='button'>
+                        Clear
+                    </button>
                 </div>
             </Modal>
         </>

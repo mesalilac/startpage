@@ -1,9 +1,9 @@
-import { Plugin } from 'vite';
+import { Buffer } from 'node:buffer';
 import fs from 'node:fs/promises';
 import path from 'node:path';
-import { Buffer } from 'node:buffer';
-import type { T_Data } from './src/consts';
-import { generate_favicon_url } from './src/utils';
+import type { Plugin } from 'vite';
+import type { Tdata } from './src/consts';
+import { generateFaviconUrl } from './src/utils';
 
 export default function (options: {
     jsonPath: string;
@@ -19,7 +19,7 @@ export default function (options: {
 
                 const resolveJsonPath = path.resolve(process.cwd(), jsonPath);
                 const content = await fs.readFile(resolveJsonPath, 'utf-8');
-                const data: T_Data = JSON.parse(content);
+                const data: Tdata = JSON.parse(content);
 
                 for (const section of data.sections) {
                     for (const link of section.links) {
@@ -28,7 +28,7 @@ export default function (options: {
                             targetDir,
                             url.hostname + '.png',
                         );
-                        const faviconUrl = generate_favicon_url(link.url, 16);
+                        const faviconUrl = generateFaviconUrl(link.url, 16);
 
                         try {
                             await fs.access(filePath);

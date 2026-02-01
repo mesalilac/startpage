@@ -1,5 +1,5 @@
 declare module '@data' {
-    import { T_Data } from '@consts';
-    const value: T_Data;
+    import type { Tdata } from '@consts';
+    const value: Tdata;
     export default value;
 }

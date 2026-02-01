@@ -1,19 +1,16 @@
-import { For, Match, Show, Switch } from 'solid-js';
+import { LinkOverlay, Section, SectionOverlay } from '@components';
+import type { TdraggableData } from '@consts';
 import { useData } from '@store';
+import type { DragEventHandler } from '@thisbeyond/solid-dnd';
 import {
+    closestCorners,
     DragDropProvider,
     DragDropSensors,
-    DragEventHandler,
     DragOverlay,
     SortableProvider,
-    mostIntersecting,
-    closestCorners,
 } from '@thisbeyond/solid-dnd';
-
-import { Link, LinkOverlay, Section, SectionOverlay } from '@components';
-
+import { For } from 'solid-js';
 import styles from './MainContent.module.css';
-import { T_DraggableData, T_Link, T_Section } from '@consts';
 
 export const MainContent = () => {
     const data = useData();
@@ -28,8 +25,8 @@ export const MainContent = () => {
         const dropId = droppable.id;
         if (dragId === dropId) return;
 
-        const dragData = draggable.data as T_DraggableData;
-        const dropData = droppable.data as T_DraggableData;
+        const dragData = draggable.data as TdraggableData;
+        const dropData = droppable.data as TdraggableData;
 
         if (dragData.type === 'link' && dropData.type === 'section') return;
 
@@ -107,17 +104,21 @@ export const MainContent = () => {
         if (!droppable) return;
 
         data.setDragHoverState({
-            source: draggable.data as T_DraggableData,
-            dest: droppable.data as T_DraggableData,
+            source: draggable.data as TdraggableData,
+            dest: droppable.data as TdraggableData,
         });
+    };
+
+    const handleDragStart: DragEventHandler = () => {
+        document.body.style.cursor = 'grabbing';
     };
 
     return (
         <DragDropProvider
-            onDragStart={() => (document.body.style.cursor = 'grabbing')}
-            onDragOver={handleDragOver}
-            onDragEnd={handleDragEnd}
             collisionDetector={closestCorners}
+            onDragEnd={handleDragEnd}
+            onDragOver={handleDragOver}
+            onDragStart={handleDragStart}
         >
             <DragDropSensors />
             <div class={styles.mainContentContainer}>
@@ -131,15 +132,15 @@ export const MainContent = () => {
                 {(draggable) => {
                     if (!draggable) return;
 
-                    const dragData = draggable.data as T_DraggableData;
+                    const dragData = draggable.data as TdraggableData;
 
                     if (dragData.type === 'section') {
                         return <SectionOverlay section={dragData.data} />;
                     } else if (dragData.type === 'link') {
                         return (
                             <LinkOverlay
-                                sectionID={dragData.parentSectionId}
                                 link={dragData.data}
+                                sectionId={dragData.parentSectionId}
                             />
                         );
                     }

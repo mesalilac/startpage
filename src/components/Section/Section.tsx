@@ -1,31 +1,21 @@
-import { For, Show, createMemo } from 'solid-js';
+import { EditSectionButton, IconTrash, Link, NewLinkButton } from '@components';
+import type { TdraggableData, Tsection } from '@consts';
 import { useData } from '@store';
-import type { T_Section, T_DraggableData } from '@consts';
-import {
-    Link,
-    EditSectionButton,
-    NewLinkButton,
-    IconTrash,
-    LinkOverlay,
-} from '@components';
-import {
-    createDroppable,
-    createSortable,
-    SortableProvider,
-} from '@thisbeyond/solid-dnd';
+import { createSortable, SortableProvider } from '@thisbeyond/solid-dnd';
+import { createMemo, For, Show } from 'solid-js';
 
 import styles from './Section.module.css';
 
-export const SectionOverlay = (props: { section: T_Section }) => {
+export const SectionOverlay = (props: { section: Tsection }) => {
     return (
         <div
+            class={styles.SectionContainer}
             style={{
                 'background-color':
                     'hsl(from var(--color-surface-base) h s l / 80%)',
                 'backdrop-filter': 'blur(2px)',
                 'pointer-events': 'none',
             }}
-            class={styles.SectionContainer}
         >
             <div class={styles.SectionHeaderContainer}>
                 <div class={styles.SectionHeaderActions}>
@@ -37,12 +27,12 @@ export const SectionOverlay = (props: { section: T_Section }) => {
     );
 };
 
-export const Section = (props: { section: T_Section }) => {
+export const Section = (props: { section: Tsection }) => {
     const data = useData();
     const sortable = createSortable(props.section.id, {
         type: 'section',
         data: props.section,
-    } as T_DraggableData);
+    } as TdraggableData);
 
     const handleRemoveSection = () => {
         data.setStore('sections', (sections) =>
@@ -67,6 +57,7 @@ export const Section = (props: { section: T_Section }) => {
 
     return (
         <div
+            class={styles.SectionContainer}
             ref={sortable.ref}
             style={{
                 transform: `translate3d(${sortable.transform.x}px, ${sortable.transform.y}px, 0)`,
@@ -78,7 +69,6 @@ export const Section = (props: { section: T_Section }) => {
                         : '',
                 'pointer-events': sortable.isActiveDraggable ? 'none' : 'auto',
             }}
-            class={styles.SectionContainer}
         >
             <div class={styles.SectionHeaderContainer}>
                 <div class={styles.SectionHeaderActions}>
@@ -91,10 +81,10 @@ export const Section = (props: { section: T_Section }) => {
                 </div>
                 <div class={styles.SectionHeaderActions}>
                     <Show when={data.editMode()}>
-                        <EditSectionButton sectionID={props.section.id} />
+                        <EditSectionButton sectionId={props.section.id} />
                         <IconTrash onClick={handleRemoveSection} />
                     </Show>
-                    <NewLinkButton sectionID={props.section.id} />
+                    <NewLinkButton sectionId={props.section.id} />
                 </div>
             </div>
             <div class='divider' />
@@ -103,7 +93,7 @@ export const Section = (props: { section: T_Section }) => {
                 <SortableProvider ids={props.section.links.map((l) => l.id)}>
                     <For each={props.section.links}>
                         {(link) => (
-                            <Link sectionID={props.section.id} link={link} />
+                            <Link link={link} sectionId={props.section.id} />
                         )}
                     </For>
                 </SortableProvider>

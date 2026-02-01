@@ -1,5 +1,6 @@
 // import { useData } from '@store';
-import { Show, JSX, onMount, onCleanup } from 'solid-js';
+import type { JSX } from 'solid-js';
+import { onCleanup, onMount, Show } from 'solid-js';
 import { Portal } from 'solid-js/web';
 
 import styles from './Modal.module.css';
@@ -29,15 +30,22 @@ export const Modal = (props: {
     return (
         <Show when={props.show}>
             <Portal>
-                <div class={styles.ModalContainer} onClick={props.close}>
+                <div
+                    class={styles.ModalContainer}
+                    onClick={props.close}
+                    role='none'
+                >
                     <div
                         class={styles.ModalBody}
                         onClick={(e) => e.stopPropagation()}
+                        role='none'
                     >
                         {props.children}
                         <div class={styles.ModalActions}>
                             {props.actionButton}
-                            <button onClick={props.close}>Close</button>
+                            <button onClick={props.close} type='button'>
+                                Close
+                            </button>
                         </div>
                     </div>
                 </div>

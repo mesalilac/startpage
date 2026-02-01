@@ -1,12 +1,10 @@
-import { useData } from '@store';
-import { createSignal, createEffect } from 'solid-js';
-import { nanoid } from 'nanoid';
-
 import { IconAddPlus, Modal } from '@components';
-import { T_Section, T_Link } from '@consts';
-
-import styles from './NewLinkButton.module.css';
+import type { Tlink } from '@consts';
+import { useData } from '@store';
 import { linkNameFromUrl } from '@utils';
+import { nanoid } from 'nanoid';
+import { createEffect, createSignal } from 'solid-js';
+import styles from './NewLinkButton.module.css';
 
 const isValidUrl = (url: string) => {
     try {
@@ -31,7 +29,7 @@ const cleanupUrl = (url: string) => {
     return currentUrl;
 };
 
-export const NewLinkButton = (props: { sectionID: string }) => {
+export const NewLinkButton = (props: { sectionId: string }) => {
     const data = useData();
 
     let inputRef: HTMLInputElement | undefined;
@@ -48,7 +46,7 @@ export const NewLinkButton = (props: { sectionID: string }) => {
             return;
         }
 
-        const newLink: T_Link = {
+        const newLink: Tlink = {
             id: `Link-${nanoid()}`,
             name: newLinkName(),
             url: cleanupUrl(newLinkUrl()),
@@ -61,7 +59,7 @@ export const NewLinkButton = (props: { sectionID: string }) => {
 
         data.setStore(
             'sections',
-            (section) => section.id === props.sectionID,
+            (section) => section.id === props.sectionId,
             'links',
             (links) => [...links, newLink],
         );
@@ -85,52 +83,60 @@ export const NewLinkButton = (props: { sectionID: string }) => {
             <IconAddPlus onClick={() => setShowModal(true)} />
 
             <Modal
-                show={showModal()}
-                close={() => setShowModal(false)}
                 actionButton={
                     <button
                         class='button-primary'
                         onClick={handleCreateNewLink}
+                        type='button'
                     >
                         Create
                     </button>
                 }
+                close={() => setShowModal(false)}
+                show={showModal()}
             >
                 <p>Create new link</p>
                 <div class='input-clear-button'>
                     <input
-                        type='text'
-                        value={newLinkName()}
-                        placeholder='Name (optional)'
                         class={styles.NewLinkInput}
                         onChange={(e) => setNewLinkName(e.target.value)}
+                        placeholder='Name (optional)'
+                        type='text'
+                        value={newLinkName()}
                     />
-                    <button onClick={() => setNewLinkName('')}>Clear</button>
+                    <button onClick={() => setNewLinkName('')} type='button'>
+                        Clear
+                    </button>
                 </div>
                 <div class='input-clear-button'>
                     <input
-                        type='text'
-                        value={newLinkUrl()}
-                        placeholder='Url'
                         class={
                             (urlInputError() ? 'input-error' : '') +
                             ' ' +
                             styles.NewLinkInput
                         }
                         onChange={(e) => setNewLinkUrl(e.target.value)}
+                        placeholder='Url'
                         ref={inputRef}
+                        type='text'
+                        value={newLinkUrl()}
                     />
-                    <button onClick={() => setNewLinkUrl('')}>Clear</button>
+                    <button onClick={() => setNewLinkUrl('')} type='button'>
+                        Clear
+                    </button>
                 </div>
                 <div class='input-clear-button'>
                     <input
+                        class={styles.NewLinkInput}
+                        onChange={(e) => setNewLinkDescription(e.target.value)}
+                        placeholder='Description (optional)'
                         type='text'
                         value={newLinkDescription()}
-                        class={styles.NewLinkInput}
-                        placeholder='Description (optional)'
-                        onChange={(e) => setNewLinkDescription(e.target.value)}
                     />
-                    <button onClick={() => setNewLinkDescription('')}>
+                    <button
+                        onClick={() => setNewLinkDescription('')}
+                        type='button'
+                    >
                         Clear
                     </button>
                 </div>

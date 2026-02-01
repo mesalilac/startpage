@@ -1,7 +1,6 @@
+import { MainContent, Nav } from '@components';
 import type { Component } from 'solid-js';
-import Comp from './Comp';
 import { DataProvider } from './store';
-import { Nav, MainContent } from '@components';
 
 import './App.css';
 
