@@ -3,6 +3,7 @@ import type { Component } from 'solid-js';
 import { DataProvider } from './store';
 
 import './App.css';
+import './utils.css';
 
 const App: Component = () => {
     return (
