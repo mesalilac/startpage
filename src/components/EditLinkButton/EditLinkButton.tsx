@@ -1,7 +1,7 @@
 import { IconEdit, Modal } from '@components';
 import type { Tlink } from '@consts';
 import { useData } from '@store';
-import { linkNameFromUrl } from '@utils';
+import { cleanupString, linkNameFromUrl, toTitleCase } from '@utils';
 import { nanoid } from 'nanoid';
 import { createEffect, createSignal } from 'solid-js';
 
@@ -38,7 +38,7 @@ export const EditLinkButton = (props: {
 
         const newLink: Tlink = {
             id: nanoid(),
-            name: newLinkName().trim(),
+            name: toTitleCase(cleanupString(newLinkName())),
             url: newLinkUrl().trim(),
             description: newLinkDescription().trim(),
         };
