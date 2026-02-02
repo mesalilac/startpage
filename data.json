@@ -24,7 +24,7 @@
                 },
                 {
                     "id": "Link-G1ClirNfhng9scmjnZ8H4",
-                    "name": "www.pinterest.com",
+                    "name": "Pinterest",
                     "url": "https://www.pinterest.com/",
                     "description": ""
                 }
@@ -60,25 +60,25 @@
                 },
                 {
                     "id": "Link-BK-aAZkK3liH7qS9FYx5V",
-                    "name": "anilist.co",
+                    "name": "Anilist",
                     "url": "https://anilist.co",
                     "description": ""
                 },
                 {
                     "id": "Link-x8VYCbiJi63bgnUDZYtZ4",
-                    "name": "myanimelist.net",
+                    "name": "Myanimelist",
                     "url": "https://myanimelist.net/",
                     "description": ""
                 },
                 {
                     "id": "Link-nxn4TLTqZkzDhKoYAgf1j",
-                    "name": "letterboxd.com",
+                    "name": "Letterboxd",
                     "url": "https://letterboxd.com/",
                     "description": ""
                 },
                 {
                     "id": "Link-0RbVDB7937Z4jR8qcVrum",
-                    "name": "backloggd.com",
+                    "name": "Backloggd",
                     "url": "https://backloggd.com/",
                     "description": ""
                 }
@@ -90,49 +90,49 @@
             "links": [
                 {
                     "id": "Link-IyCNZkaAUMoJClES2i1sG",
-                    "name": "TypeScript",
+                    "name": "Typescriptlang",
                     "url": "https://typescriptlang.org",
                     "description": "Typed superset of JavaScript."
                 },
                 {
                     "id": "Link-3mo0146ldtkjjnAraYGLj",
-                    "name": "Python Docs",
+                    "name": "Docs Python",
                     "url": "https://docs.python.org/3/",
                     "description": "Official Python 3 documentation."
                 },
                 {
                     "id": "Link-Mr4gKLwNEUIh6kM_6rENd",
-                    "name": "Go Dev",
+                    "name": "Go",
                     "url": "https://go.dev/doc/",
                     "description": "Go programming language documentation."
                 },
                 {
                     "id": "Link-XbUyNSQu1BSJwA3qKuNQ3",
-                    "name": "dev.to",
+                    "name": "Dev",
                     "url": "https://dev.to",
                     "description": ""
                 },
                 {
                     "id": "Link-CP_nMxtznB7JbFO-bS7zn",
-                    "name": "developer.mozilla.org",
+                    "name": "Developer Mozilla",
                     "url": "https://developer.mozilla.org/en-US/",
                     "description": ""
                 },
                 {
                     "id": "Link-CeYpexlq7e1MOBr0uv9ay",
-                    "name": "www.solidjs.com",
+                    "name": "Solidjs",
                     "url": "https://www.solidjs.com/",
                     "description": ""
                 },
                 {
                     "id": "Link-d0mkaOb07-wlEBwCz1znG",
-                    "name": "github.com",
+                    "name": "Github",
                     "url": "https://github.com/",
                     "description": ""
                 },
                 {
                     "id": "Link-HXTUKo9OzEmxbhJZBGjcX",
-                    "name": "react.dev",
+                    "name": "React",
                     "url": "https://react.dev",
                     "description": ""
                 }
@@ -156,37 +156,37 @@
                 },
                 {
                     "id": "Link-qe3JMlqKFfvwODa3jkU-0",
-                    "name": "mail.google.com",
+                    "name": "Mail Google",
                     "url": "https://mail.google.com",
                     "description": ""
                 },
                 {
                     "id": "Link-6ydMsK6mjDY40ZsBIXGur",
-                    "name": "proton.me",
+                    "name": "Proton",
                     "url": "https://proton.me/",
                     "description": ""
                 },
                 {
                     "id": "Link-vY7-UxyIXsYgI52mpeaW-",
-                    "name": "calendar.google.com",
+                    "name": "Calendar Google",
                     "url": "https://calendar.google.com/calendar",
                     "description": ""
                 },
                 {
                     "id": "Link-1H6YQW7s0wqpRbYLg0n_J",
-                    "name": "www.amazon.sa",
+                    "name": "Amazon",
                     "url": "https://www.amazon.sa/",
                     "description": ""
                 },
                 {
                     "id": "Link-0AP10K-rJoEcISYfuQEpb",
-                    "name": "www.aliexpress.com",
+                    "name": "Aliexpress",
                     "url": "https://www.aliexpress.com",
                     "description": ""
                 },
                 {
                     "id": "Link-e_JdKK5uCvSegxjph-QbI",
-                    "name": "www.wikipedia.org",
+                    "name": "Wikipedia",
                     "url": "https://www.wikipedia.org/",
                     "description": ""
                 }
@@ -198,19 +198,19 @@
             "links": [
                 {
                     "id": "Link-eoyFfoL2dy_Jud-L4DLAu",
-                    "name": "regex101.com",
+                    "name": "Regex101",
                     "url": "https://regex101.com/",
                     "description": ""
                 },
                 {
                     "id": "Link-C2IvDbEuZcLqqXu1ft2WN",
-                    "name": "jsonformatter.curiousconcept.com",
+                    "name": "Jsonformatter Curiousconcept",
                     "url": "https://jsonformatter.curiousconcept.com/",
                     "description": ""
                 },
                 {
                     "id": "Link-L6AN8pmgsFamFG4X6Vzkc",
-                    "name": "postimages.org",
+                    "name": "Postimages",
                     "url": "https://postimages.org/",
                     "description": ""
                 }
@@ -222,55 +222,55 @@
             "links": [
                 {
                     "id": "Link-316Ip0QCygeA4y96aAwA1",
-                    "name": "excalidraw.com",
+                    "name": "Excalidraw",
                     "url": "https://excalidraw.com/",
                     "description": ""
                 },
                 {
                     "id": "Link-sZ0sYDL6_WUONp9K979RI",
-                    "name": "dribbble.com",
+                    "name": "Dribbble",
                     "url": "https://dribbble.com/",
                     "description": ""
                 },
                 {
                     "id": "Link-I-a32RBgQarbcZ_WiSgsN",
-                    "name": "unsplash.com",
+                    "name": "Unsplash",
                     "url": "https://unsplash.com/",
                     "description": ""
                 },
                 {
                     "id": "Link-R7asxqEZh00iQheQa7SNy",
-                    "name": "www.pexels.com",
+                    "name": "Pexels",
                     "url": "https://www.pexels.com/",
                     "description": ""
                 },
                 {
                     "id": "Link-Pbu9K_-1o2NJ6XoAIYS2V",
-                    "name": "fonts.google.com",
+                    "name": "Fonts Google",
                     "url": "https://fonts.google.com/",
                     "description": ""
                 },
                 {
                     "id": "Link-vLthJ8MYt4UBd4qbjKI1E",
-                    "name": "coolors.co",
+                    "name": "Coolors",
                     "url": "https://coolors.co/",
                     "description": ""
                 },
                 {
                     "id": "Link-wUTx6dBhuRX3oArH21SRE",
-                    "name": "iconbuddy.com",
+                    "name": "Iconbuddy",
                     "url": "https://iconbuddy.com/",
                     "description": ""
                 },
                 {
                     "id": "Link-nVwNjB2AtAXUOa-p9Hyfg",
-                    "name": "flowbite.com",
+                    "name": "Flowbite",
                     "url": "https://flowbite.com/",
                     "description": ""
                 },
                 {
                     "id": "Link-vY-Ul4GL3njePgyCqT_Bx",
-                    "name": "css-tricks.com",
+                    "name": "Css Tricks",
                     "url": "https://css-tricks.com/",
                     "description": ""
                 }
@@ -282,25 +282,25 @@
             "links": [
                 {
                     "id": "Link-pICrtfVZ4FvvbehFtVaNr",
-                    "name": "doc.rust-lang.org",
+                    "name": "Doc Rust Lang",
                     "url": "https://doc.rust-lang.org",
                     "description": ""
                 },
                 {
                     "id": "Link-SYQ8c6ATomd9QwdGSN7tV",
-                    "name": "doc.rust-lang.org",
+                    "name": "Doc Rust Lang Book",
                     "url": "https://doc.rust-lang.org/book/",
                     "description": ""
                 },
                 {
                     "id": "Link-SWwrtc0ZlNwgd6dFFDNWJ",
-                    "name": "docs.rs",
+                    "name": "Docs Rust",
                     "url": "https://docs.rs/",
                     "description": ""
                 },
                 {
                     "id": "Link-9JQVuBogdqIIUp_1i_78k",
-                    "name": "v2.tauri.app",
+                    "name": "V2 Tauri",
                     "url": "https://v2.tauri.app/",
                     "description": ""
                 }
