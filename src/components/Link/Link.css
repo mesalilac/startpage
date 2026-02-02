@@ -8,12 +8,6 @@
     min-height: 40px;
 }
 
-.link-actions {
-    display: flex;
-    flex-direction: row;
-    gap: var(--size-gap-lg);
-}
-
 .link-icon-name {
     display: flex;
     flex-direction: row;

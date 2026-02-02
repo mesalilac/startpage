@@ -45,7 +45,7 @@ export const Nav = () => {
     return (
         <div class='nav-container'>
             <p>{formattedDate()}</p>
-            <div class='nav-actions'>
+            <div class='flex-row'>
                 <NewSectionButton />
                 <button
                     class='button-secondary'

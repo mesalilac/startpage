@@ -35,7 +35,7 @@ export const LinkOverlay = (props: { sectionId: string; link: Tlink }) => {
             }}
             title={props.link.description}
         >
-            <div class='link-actions'>
+            <div class='flex-row'>
                 <span class='drag-handler'>⠿</span>
                 <a class='link-icon-name' href={props.link.url}>
                     <img
@@ -102,7 +102,7 @@ export const Link = (props: { sectionId: string; link: Tlink }) => {
             }}
             title={props.link.description}
         >
-            <div class='link-actions'>
+            <div class='flex-row'>
                 <Show when={data.editMode()}>
                     <span class='drag-handler' {...sortable.dragActivators}>
                         ⠿
@@ -119,7 +119,7 @@ export const Link = (props: { sectionId: string; link: Tlink }) => {
             </div>
 
             <Show when={data.editMode()}>
-                <div class='link-actions'>
+                <div class='flex-row'>
                     <EditLinkButton
                         linkId={props.link.id}
                         sectionId={props.sectionId}
