@@ -1,8 +1,6 @@
 import { IconEdit, Modal } from '@components';
-import type { Tlink } from '@consts';
 import { useData } from '@store';
 import { cleanupString, linkNameFromUrl, toTitleCase } from '@utils';
-import { nanoid } from 'nanoid';
 import { createEffect, createSignal } from 'solid-js';
 
 import './EditLinkButton.css';
@@ -36,23 +34,18 @@ export const EditLinkButton = (props: {
             return;
         }
 
-        const newLink: Tlink = {
-            id: nanoid(),
-            name: toTitleCase(cleanupString(newLinkName())),
-            url: newLinkUrl().trim(),
-            description: newLinkDescription().trim(),
-        };
-
-        if (!newLink.name) {
-            newLink.name = linkNameFromUrl(newLink.url);
-        }
-
         data.setStore(
             'sections',
             (section) => section.id === props.sectionId,
             'links',
             (link) => link.id === props.linkId,
-            newLink,
+            {
+                name: newLinkName()
+                    ? toTitleCase(cleanupString(newLinkName()))
+                    : linkNameFromUrl(newLinkUrl()),
+                url: newLinkUrl().trim(),
+                description: newLinkDescription().trim(),
+            },
         );
 
         setShowModal(false);
