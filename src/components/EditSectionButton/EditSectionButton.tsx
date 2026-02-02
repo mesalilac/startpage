@@ -1,5 +1,6 @@
 import { IconEdit, Modal } from '@components';
 import { useData } from '@store';
+import { cleanupString, linkNameFromUrl, toTitleCase } from '@utils';
 import { createEffect, createSignal } from 'solid-js';
 // import './EditSectionButton.css';
 
@@ -22,7 +23,7 @@ export const EditSectionButton = (props: { sectionId: string }) => {
             'sections',
             (x) => x.id === props.sectionId,
             'name',
-            SectionName().trim(),
+            toTitleCase(cleanupString(SectionName())),
         );
 
         setShowModal(false);
