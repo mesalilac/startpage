@@ -1,6 +1,6 @@
 import { IconEdit, Modal } from '@components';
 import { useData } from '@store';
-import { cleanupString, linkNameFromUrl, toTitleCase } from '@utils';
+import { cleanupString, toTitleCase } from '@utils';
 import { createEffect, createSignal } from 'solid-js';
 // import './EditSectionButton.css';
 
