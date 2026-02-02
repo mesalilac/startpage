@@ -47,18 +47,6 @@
                     "description": "Live streaming for gamers and coders."
                 },
                 {
-                    "id": "Link-w6RwTZc4sT0vgyZXb6uzL",
-                    "name": "Netflix",
-                    "url": "https://netflix.com",
-                    "description": "Movies and TV shows."
-                },
-                {
-                    "id": "Link-QJg47ts_CJ_0_E6kcrcve",
-                    "name": "Spotify",
-                    "url": "https://spotify.com",
-                    "description": "Music and podcasts for deep work."
-                },
-                {
                     "id": "Link-BK-aAZkK3liH7qS9FYx5V",
                     "name": "Anilist",
                     "url": "https://anilist.co",
@@ -89,6 +77,12 @@
             "name": "Web & Software Dev",
             "links": [
                 {
+                    "id": "Link-d0mkaOb07-wlEBwCz1znG",
+                    "name": "Github",
+                    "url": "https://github.com/",
+                    "description": ""
+                },
+                {
                     "id": "Link-IyCNZkaAUMoJClES2i1sG",
                     "name": "Typescriptlang",
                     "url": "https://typescriptlang.org",
@@ -101,15 +95,9 @@
                     "description": "Official Python 3 documentation."
                 },
                 {
-                    "id": "Link-Mr4gKLwNEUIh6kM_6rENd",
-                    "name": "Go",
-                    "url": "https://go.dev/doc/",
-                    "description": "Go programming language documentation."
-                },
-                {
-                    "id": "Link-XbUyNSQu1BSJwA3qKuNQ3",
-                    "name": "Dev",
-                    "url": "https://dev.to",
+                    "id": "Link-CeYpexlq7e1MOBr0uv9ay",
+                    "name": "Solidjs",
+                    "url": "https://www.solidjs.com/",
                     "description": ""
                 },
                 {
@@ -119,22 +107,10 @@
                     "description": ""
                 },
                 {
-                    "id": "Link-CeYpexlq7e1MOBr0uv9ay",
-                    "name": "Solidjs",
-                    "url": "https://www.solidjs.com/",
-                    "description": ""
-                },
-                {
-                    "id": "Link-d0mkaOb07-wlEBwCz1znG",
-                    "name": "Github",
-                    "url": "https://github.com/",
-                    "description": ""
-                },
-                {
-                    "id": "Link-HXTUKo9OzEmxbhJZBGjcX",
-                    "name": "React",
-                    "url": "https://react.dev",
-                    "description": ""
+                    "id": "Link-Mr4gKLwNEUIh6kM_6rENd",
+                    "name": "Go",
+                    "url": "https://go.dev/doc/",
+                    "description": "Go programming language documentation."
                 }
             ]
         },
@@ -143,16 +119,10 @@
             "name": "Productivity & Shopping",
             "links": [
                 {
-                    "id": "Link-JMiJGxIEBmSfpRdP4SJ0L",
-                    "name": "Notion",
-                    "url": "https://notion.so",
-                    "description": "All-in-one workspace for notes and tasks."
-                },
-                {
-                    "id": "Link-0czvl1lco4CzZU4QeYf7X",
-                    "name": "Trello",
-                    "url": "https://trello.com",
-                    "description": "Kanban boards for project management."
+                    "id": "Link-1H6YQW7s0wqpRbYLg0n_J",
+                    "name": "Amazon",
+                    "url": "https://www.amazon.sa/",
+                    "description": ""
                 },
                 {
                     "id": "Link-qe3JMlqKFfvwODa3jkU-0",
@@ -170,12 +140,6 @@
                     "id": "Link-vY7-UxyIXsYgI52mpeaW-",
                     "name": "Calendar Google",
                     "url": "https://calendar.google.com/calendar",
-                    "description": ""
-                },
-                {
-                    "id": "Link-1H6YQW7s0wqpRbYLg0n_J",
-                    "name": "Amazon",
-                    "url": "https://www.amazon.sa/",
                     "description": ""
                 },
                 {
@@ -239,6 +203,12 @@
                     "description": ""
                 },
                 {
+                    "id": "Link-vY-Ul4GL3njePgyCqT_Bx",
+                    "name": "Css Tricks",
+                    "url": "https://css-tricks.com/",
+                    "description": ""
+                },
+                {
                     "id": "Link-R7asxqEZh00iQheQa7SNy",
                     "name": "Pexels",
                     "url": "https://www.pexels.com/",
@@ -266,12 +236,6 @@
                     "id": "Link-nVwNjB2AtAXUOa-p9Hyfg",
                     "name": "Flowbite",
                     "url": "https://flowbite.com/",
-                    "description": ""
-                },
-                {
-                    "id": "Link-vY-Ul4GL3njePgyCqT_Bx",
-                    "name": "Css Tricks",
-                    "url": "https://css-tricks.com/",
                     "description": ""
                 }
             ]
