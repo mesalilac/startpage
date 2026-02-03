@@ -1,5 +1,5 @@
 import { IconAddPlus, Modal } from '@components';
-import type { Tsection } from '@consts';
+import type { Tlink, Tsection } from '@consts';
 import { useData } from '@store';
 import { cleanupString, toTitleCase } from '@utils';
 import { nanoid } from 'nanoid';
@@ -21,10 +21,17 @@ export const NewSectionButton = () => {
             return;
         }
 
+        const newLink: Tlink = {
+            id: `Link-${nanoid()}`,
+            name: 'Example',
+            url: 'https://example.com',
+            description: '',
+        };
+
         const newSection: Tsection = {
             id: `Section-${nanoid()}`,
             name: toTitleCase(cleanupString(newSectionName())),
-            links: [],
+            links: [newLink],
         };
 
         data.setStore({
