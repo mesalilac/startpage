@@ -73,25 +73,13 @@
             ]
         },
         {
-            "id": "Section-W0GCrf6_HF8EaRy8tIu7g",
+            "id": "Section-q-mX8Otqqbg2ktc3oD1-g",
             "name": "Web & Software Dev",
             "links": [
                 {
                     "id": "Link-d0mkaOb07-wlEBwCz1znG",
                     "name": "Github",
                     "url": "https://github.com/",
-                    "description": ""
-                },
-                {
-                    "id": "Link-IyCNZkaAUMoJClES2i1sG",
-                    "name": "Typescriptlang",
-                    "url": "https://typescriptlang.org",
-                    "description": "Typed superset of JavaScript."
-                },
-                {
-                    "id": "Link-CeYpexlq7e1MOBr0uv9ay",
-                    "name": "Solidjs",
-                    "url": "https://www.solidjs.com/",
                     "description": ""
                 },
                 {
@@ -108,9 +96,45 @@
                 },
                 {
                     "id": "Link-Mr4gKLwNEUIh6kM_6rENd",
-                    "name": "Go",
+                    "name": "Docs Go",
                     "url": "https://go.dev/doc/",
                     "description": "Go programming language documentation."
+                },
+                {
+                    "id": "Link-Kbw8wlpjZbc9inEqUoaaC",
+                    "name": "Typescriptlang",
+                    "url": "https://www.typescriptlang.org/docs",
+                    "description": ""
+                },
+                {
+                    "id": "Link-iCE8yncNJRYFOOm1Kp8Lz",
+                    "name": "Docs Solidjs",
+                    "url": "https://docs.solidjs.com",
+                    "description": ""
+                },
+                {
+                    "id": "Link-9JQVuBogdqIIUp_1i_78k",
+                    "name": "V2 Tauri",
+                    "url": "https://v2.tauri.app/",
+                    "description": ""
+                },
+                {
+                    "id": "Link-SWwrtc0ZlNwgd6dFFDNWJ",
+                    "name": "Docs Rust",
+                    "url": "https://docs.rs/",
+                    "description": ""
+                },
+                {
+                    "id": "Link-SYQ8c6ATomd9QwdGSN7tV",
+                    "name": "Doc Rust Lang Book",
+                    "url": "https://doc.rust-lang.org/book/",
+                    "description": ""
+                },
+                {
+                    "id": "Link-pICrtfVZ4FvvbehFtVaNr",
+                    "name": "Doc Rust Lang",
+                    "url": "https://doc.rust-lang.org",
+                    "description": ""
                 }
             ]
         },
@@ -125,15 +149,9 @@
                     "description": ""
                 },
                 {
-                    "id": "Link-qe3JMlqKFfvwODa3jkU-0",
-                    "name": "Mail Google",
-                    "url": "https://mail.google.com",
-                    "description": ""
-                },
-                {
-                    "id": "Link-6ydMsK6mjDY40ZsBIXGur",
-                    "name": "Proton",
-                    "url": "https://proton.me/",
+                    "id": "Link-0AP10K-rJoEcISYfuQEpb",
+                    "name": "Aliexpress",
+                    "url": "https://www.aliexpress.com",
                     "description": ""
                 },
                 {
@@ -143,9 +161,15 @@
                     "description": ""
                 },
                 {
-                    "id": "Link-0AP10K-rJoEcISYfuQEpb",
-                    "name": "Aliexpress",
-                    "url": "https://www.aliexpress.com",
+                    "id": "Link-qe3JMlqKFfvwODa3jkU-0",
+                    "name": "Mail Google",
+                    "url": "https://mail.google.com",
+                    "description": ""
+                },
+                {
+                    "id": "Link-6ydMsK6mjDY40ZsBIXGur",
+                    "name": "Proton",
+                    "url": "https://proton.me/",
                     "description": ""
                 },
                 {
@@ -242,36 +266,6 @@
                     "id": "Link-nVwNjB2AtAXUOa-p9Hyfg",
                     "name": "Flowbite",
                     "url": "https://flowbite.com/",
-                    "description": ""
-                }
-            ]
-        },
-        {
-            "id": "Section-mLGQg0adhe2SwwWjetq_W",
-            "name": "The Rust Lab",
-            "links": [
-                {
-                    "id": "Link-pICrtfVZ4FvvbehFtVaNr",
-                    "name": "Doc Rust Lang",
-                    "url": "https://doc.rust-lang.org",
-                    "description": ""
-                },
-                {
-                    "id": "Link-SYQ8c6ATomd9QwdGSN7tV",
-                    "name": "Doc Rust Lang Book",
-                    "url": "https://doc.rust-lang.org/book/",
-                    "description": ""
-                },
-                {
-                    "id": "Link-SWwrtc0ZlNwgd6dFFDNWJ",
-                    "name": "Docs Rust",
-                    "url": "https://docs.rs/",
-                    "description": ""
-                },
-                {
-                    "id": "Link-9JQVuBogdqIIUp_1i_78k",
-                    "name": "V2 Tauri",
-                    "url": "https://v2.tauri.app/",
                     "description": ""
                 }
             ]
