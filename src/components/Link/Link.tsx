@@ -119,7 +119,7 @@ export const Link = (props: { sectionId: string; link: Tlink }) => {
             </div>
 
             <Show when={data.editMode()}>
-                <div class='flex-row'>
+                <div class='flex-row' style={{ 'margin-right': '1rem' }}>
                     <EditLinkButton
                         linkId={props.link.id}
                         sectionId={props.sectionId}
