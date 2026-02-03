@@ -68,7 +68,13 @@ export const NewSectionButton = () => {
                 show={showModal()}
             >
                 <p>Create new section</p>
-                <div class='input-clear-button'>
+                <form
+                    class='flex-row'
+                    onSubmit={(e) => {
+                        e.preventDefault();
+                        handleCreateNewSection();
+                    }}
+                >
                     <input
                         class={nameInputError() ? 'input-error' : ''}
                         onChange={(e) => setNewSectionName(e.target.value)}
@@ -77,10 +83,14 @@ export const NewSectionButton = () => {
                         type='text'
                         value={newSectionName()}
                     />
-                    <button onClick={() => setNewSectionName('')} type='button'>
+                    <button
+                        onClick={() => setNewSectionName('')}
+                        tabIndex={-1}
+                        type='button'
+                    >
                         Clear
                     </button>
-                </div>
+                </form>
             </Modal>
         </>
     );

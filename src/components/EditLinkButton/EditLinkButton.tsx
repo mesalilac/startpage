@@ -75,6 +75,11 @@ export const EditLinkButton = (props: {
         }
     });
 
+    const handleFormSubmit = (e: SubmitEvent) => {
+        e.preventDefault();
+        handleEditLink();
+    };
+
     return (
         <>
             <IconEdit onClick={() => setShowModal(true)} />
@@ -93,45 +98,62 @@ export const EditLinkButton = (props: {
                 show={showModal()}
             >
                 <p>Edit link</p>
-                <div class='input-clear-button'>
-                    <input
-                        class='new-link-input'
-                        onChange={(e) => setNewLinkName(e.target.value)}
-                        placeholder='Name (optional)'
-                        ref={inputRef}
-                        type='text'
-                        value={newLinkName()}
-                    />
-                    <button onClick={() => setNewLinkName('')} type='button'>
+                <div class='flex-row'>
+                    <form onSubmit={handleFormSubmit}>
+                        <input
+                            class='new-link-input'
+                            onChange={(e) => setNewLinkName(e.target.value)}
+                            placeholder='Name (optional)'
+                            ref={inputRef}
+                            type='text'
+                            value={newLinkName()}
+                        />
+                    </form>
+                    <button
+                        onClick={() => setNewLinkName('')}
+                        tabIndex={-1}
+                        type='button'
+                    >
                         Clear
                     </button>
                 </div>
-                <div class='input-clear-button'>
-                    <input
-                        class={
-                            (urlInputError() ? 'input-error' : '') +
-                            ' ' +
-                            'new-link-input'
-                        }
-                        onChange={(e) => setNewLinkUrl(e.target.value)}
-                        placeholder='Url'
-                        type='text'
-                        value={newLinkUrl()}
-                    />
-                    <button onClick={() => setNewLinkUrl('')} type='button'>
+                <div class='flex-row'>
+                    <form onSubmit={handleFormSubmit}>
+                        <input
+                            class={
+                                (urlInputError() ? 'input-error' : '') +
+                                ' ' +
+                                'new-link-input'
+                            }
+                            onChange={(e) => setNewLinkUrl(e.target.value)}
+                            placeholder='Url'
+                            type='text'
+                            value={newLinkUrl()}
+                        />
+                    </form>
+                    <button
+                        onClick={() => setNewLinkUrl('')}
+                        tabIndex={-1}
+                        type='button'
+                    >
                         Clear
                     </button>
                 </div>
-                <div class='input-clear-button'>
-                    <input
-                        class='new-link-input'
-                        onChange={(e) => setNewLinkDescription(e.target.value)}
-                        placeholder='Description (optional)'
-                        type='text'
-                        value={newLinkDescription()}
-                    />
+                <div class='flex-row'>
+                    <form onSubmit={handleFormSubmit}>
+                        <input
+                            class='new-link-input'
+                            onChange={(e) =>
+                                setNewLinkDescription(e.target.value)
+                            }
+                            placeholder='Description (optional)'
+                            type='text'
+                            value={newLinkDescription()}
+                        />
+                    </form>
                     <button
                         onClick={() => setNewLinkDescription('')}
+                        tabIndex={-1}
                         type='button'
                     >
                         Clear

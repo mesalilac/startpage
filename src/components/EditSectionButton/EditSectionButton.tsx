@@ -45,6 +45,11 @@ export const EditSectionButton = (props: { sectionId: string }) => {
         }
     });
 
+    const handleFormSubmit = (e: SubmitEvent) => {
+        e.preventDefault();
+        handleEditSection();
+    };
+
     return (
         <>
             <IconEdit onClick={() => setShowModal(true)} />
@@ -63,19 +68,25 @@ export const EditSectionButton = (props: { sectionId: string }) => {
                 show={showModal()}
             >
                 <p>Edit section</p>
-                <div class='input-clear-button'>
-                    <input
-                        class={nameInputError() ? 'input-error' : ''}
-                        onChange={(e) => setSectionName(e.target.value)}
-                        placeholder='Name'
-                        ref={inputRef}
-                        style={{
-                            width: '300px',
-                        }}
-                        type='text'
-                        value={SectionName()}
-                    />
-                    <button onClick={() => setSectionName('')} type='button'>
+                <div class='flex-row'>
+                    <form onSubmit={handleFormSubmit}>
+                        <input
+                            class={nameInputError() ? 'input-error' : ''}
+                            onChange={(e) => setSectionName(e.target.value)}
+                            placeholder='Name'
+                            ref={inputRef}
+                            style={{
+                                width: '300px',
+                            }}
+                            type='text'
+                            value={SectionName()}
+                        />
+                    </form>
+                    <button
+                        onClick={() => setSectionName('')}
+                        tabIndex={-1}
+                        type='button'
+                    >
                         Clear
                     </button>
                 </div>
