@@ -1,14 +1,11 @@
 export const generateFaviconUrl = (url: string, size: number): string => {
-    const domain = new URL(url);
-    const tmpList = domain.hostname.split('.');
+    try {
+        const domain = new URL(url);
 
-    if (tmpList.length === 3) {
-        tmpList.shift();
+        return `https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=${encodeURIComponent(domain.origin)}&size=${size}`;
+    } catch {
+        return `https://www.google.com/s2/favicons?sz=${size}&domain_url=${url}`;
     }
-
-    const domainUrl = tmpList.join('.');
-
-    return `https://www.google.com/s2/favicons?sz=${size}&domain_url=${domainUrl}`;
 };
 
 export const toTitleCase = (str: string) => {
