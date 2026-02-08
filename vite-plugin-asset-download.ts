@@ -30,6 +30,8 @@ export default function (options: {
                         );
                         const faviconUrl = generateFaviconUrl(link.url, 16);
 
+                        if (url.hostname === 'localhost') continue;
+
                         try {
                             await fs.access(filePath);
                         } catch {

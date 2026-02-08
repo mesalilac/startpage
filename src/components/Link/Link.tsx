@@ -4,7 +4,7 @@ import { useData } from '@store';
 import { createSortable } from '@thisbeyond/solid-dnd';
 import { generateFaviconUrl } from '@utils';
 import type { JSX } from 'solid-js';
-import { createMemo, Show } from 'solid-js';
+import { createEffect, createMemo, createSignal, Show } from 'solid-js';
 import './Link.css';
 
 export const LinkOverlay = (props: { sectionId: string; link: Tlink }) => {
@@ -17,12 +17,25 @@ export const LinkOverlay = (props: { sectionId: string; link: Tlink }) => {
         return generateFaviconUrl(props.link.url, 16);
     });
 
+    const [imgSrc, setImgSrc] = createSignal(faviconUrl());
+    const [imgError, setImgError] = createSignal(false);
+
     const handleImgError: JSX.EventHandlerUnion<
         HTMLImageElement,
         ErrorEvent
-    > = (e) => {
-        e.currentTarget.src = faviconFallbackUrl();
+    > = () => {
+        if (!imgError()) {
+            setImgError(true);
+
+            setImgSrc(faviconFallbackUrl());
+        }
     };
+
+    createEffect(() => {
+        faviconUrl();
+        setImgError(false);
+        setImgSrc(faviconUrl());
+    });
 
     return (
         <div
@@ -41,7 +54,7 @@ export const LinkOverlay = (props: { sectionId: string; link: Tlink }) => {
                     <img
                         alt='Favicon'
                         onError={handleImgError}
-                        src={faviconUrl()}
+                        src={imgSrc()}
                     />
                     <p>{props.link.name}</p>
                 </a>
@@ -77,12 +90,25 @@ export const Link = (props: { sectionId: string; link: Tlink }) => {
         return generateFaviconUrl(props.link.url, 16);
     });
 
+    const [imgSrc, setImgSrc] = createSignal(faviconUrl());
+    const [imgError, setImgError] = createSignal(false);
+
     const handleImgError: JSX.EventHandlerUnion<
         HTMLImageElement,
         ErrorEvent
-    > = (e) => {
-        e.currentTarget.src = faviconFallbackUrl();
+    > = () => {
+        if (!imgError()) {
+            setImgError(true);
+
+            setImgSrc(faviconFallbackUrl());
+        }
     };
+
+    createEffect(() => {
+        faviconUrl();
+        setImgError(false);
+        setImgSrc(faviconUrl());
+    });
 
     return (
         <div
@@ -112,7 +138,7 @@ export const Link = (props: { sectionId: string; link: Tlink }) => {
                     <img
                         alt='Favicon'
                         onError={handleImgError}
-                        src={faviconUrl()}
+                        src={imgSrc()}
                     />
                     <p>{props.link.name}</p>
                 </a>

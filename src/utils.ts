@@ -2,6 +2,8 @@ export const generateFaviconUrl = (url: string, size: number): string => {
     try {
         const domain = new URL(url);
 
+        if (domain.hostname === 'localhost') return './localhost.svg';
+
         return `https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=${encodeURIComponent(domain.origin)}&size=${size}`;
     } catch {
         return `https://www.google.com/s2/favicons?sz=${size}&domain_url=${url}`;
