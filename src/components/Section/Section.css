@@ -2,11 +2,17 @@
     display: flex;
     flex-direction: column;
     gap: var(--size-gap-sm);
+    break-inside: avoid;
+    margin-bottom: var(--size-gap-lg);
     width: 100%;
-    max-height: var(--size-section-height);
     background-color: var(--color-surface-base);
     padding: var(--size-padding-sm);
     border-radius: var(--size-radius-card);
+    transition: box-shadow ease-in-out 0.2s;
+
+    &:hover {
+        box-shadow: 0 0 25px 4px rgb(255 255 255 / 5%);
+    }
 }
 
 .section-header-container {

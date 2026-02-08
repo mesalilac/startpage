@@ -67,10 +67,6 @@ export const Section = (props: { section: Tsection }) => {
                     sortable.isActiveDraggable || isReceivingLink()
                         ? 'var(--size-border-medium) dashed var(--color-button-primary)'
                         : '',
-                'border-bottom':
-                    props.section.links.length > 6
-                        ? 'var(--size-border-medium) solid hsl(from var(--color-button-primary) h s l / 50%)'
-                        : '',
                 'pointer-events': sortable.isActiveDraggable ? 'none' : 'auto',
             }}
         >
