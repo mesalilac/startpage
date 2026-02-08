@@ -1,11 +1,13 @@
 .link-container {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     align-items: center;
-    background-color: var(--color-surface-base);
-    border-radius: var(--size-radius-card);
+    justify-content: space-between;
+
     min-height: 40px;
+    border-radius: var(--size-radius-card);
+
+    background-color: var(--color-surface-base);
 }
 
 .link-icon-name {
@@ -13,16 +15,17 @@
     flex-direction: row;
     gap: var(--size-gap-sm);
     align-items: center;
-    text-decoration: none;
+
     color: var(--color-text-primary);
-}
+    text-decoration: none;
 
-.link-icon-name p {
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-}
+    & p {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
 
-.link-icon-name:hover {
-    color: var(--color-accent-base);
+    &:hover {
+        color: var(--color-accent-base);
+    }
 }

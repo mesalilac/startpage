@@ -3,11 +3,14 @@
     flex-direction: column;
     gap: var(--size-gap-sm);
     break-inside: avoid;
-    margin-bottom: var(--size-gap-lg);
+
     width: 100%;
-    background-color: var(--color-surface-base);
+    margin-bottom: var(--size-gap-lg);
     padding: var(--size-padding-sm);
     border-radius: var(--size-radius-card);
+
+    background-color: var(--color-surface-base);
+
     transition: box-shadow ease-in-out 0.2s;
 
     &:hover {
@@ -18,13 +21,14 @@
 .section-header-container {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     align-items: center;
-    min-height: 48px;
-}
+    justify-content: space-between;
 
-.section-header-container p {
-    font-weight: bold;
+    min-height: 48px;
+
+    & p {
+        font-weight: bold;
+    }
 }
 
 .section-header-actions {
@@ -35,9 +39,10 @@
 }
 
 .section-links-container {
-    display: flex;
-    min-height: 50px;
     overflow-y: scroll;
+    display: flex;
     flex-direction: column;
     gap: var(--size-gap-xs);
+
+    min-height: 50px;
 }

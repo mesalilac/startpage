@@ -1,21 +1,25 @@
 .modal-container {
     position: fixed;
     inset: 0;
-    background-color: var(--color-modal-dim-bg);
+
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+
+    background-color: var(--color-modal-dim-bg);
     backdrop-filter: blur(2px);
 }
 
 .modal-body {
-    background-color: var(--color-modal-bg);
-    border: var(--size-border-hairline) solid var(--color-border-muted);
-    border-radius: var(--size-radius-modal);
-    padding: var(--size-padding-lg);
     display: flex;
     flex-direction: column;
     gap: var(--size-gap-md);
+
+    padding: var(--size-padding-lg);
+    border: var(--size-border-hairline) solid var(--color-border-muted);
+    border-radius: var(--size-radius-modal);
+
+    background-color: var(--color-modal-bg);
 }
 
 .modal-actions {
