@@ -1,7 +1,7 @@
 import { IconAddPlus, Modal } from '@components';
 import type { Tlink, Tsection } from '@consts';
 import { useData } from '@store';
-import { cleanupString, toTitleCase } from '@utils';
+import { toTitleCase } from '@utils';
 import { nanoid } from 'nanoid';
 import { createEffect, createSignal } from 'solid-js';
 import './NewSectionButton.css';
@@ -30,7 +30,7 @@ export const NewSectionButton = () => {
 
         const newSection: Tsection = {
             id: `Section-${nanoid()}`,
-            name: toTitleCase(cleanupString(newSectionName())),
+            name: toTitleCase(newSectionName()),
             links: [newLink],
         };
 

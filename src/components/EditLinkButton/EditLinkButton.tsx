@@ -1,6 +1,6 @@
 import { IconEdit, Modal } from '@components';
 import { useData } from '@store';
-import { cleanupString, linkNameFromUrl, toTitleCase } from '@utils';
+import { linkNameFromUrl, toTitleCase } from '@utils';
 import { createEffect, createSignal } from 'solid-js';
 
 import './EditLinkButton.css';
@@ -41,7 +41,7 @@ export const EditLinkButton = (props: {
             (link) => link.id === props.linkId,
             {
                 name: newLinkName()
-                    ? toTitleCase(cleanupString(newLinkName()))
+                    ? toTitleCase(newLinkName())
                     : linkNameFromUrl(newLinkUrl()),
                 url: newLinkUrl().trim(),
                 description: newLinkDescription().trim(),

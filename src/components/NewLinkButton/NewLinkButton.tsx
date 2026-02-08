@@ -1,7 +1,7 @@
 import { IconAddPlus, Modal } from '@components';
 import type { Tlink } from '@consts';
 import { useData } from '@store';
-import { linkNameFromUrl } from '@utils';
+import { linkNameFromUrl, toTitleCase } from '@utils';
 import { nanoid } from 'nanoid';
 import { createEffect, createSignal } from 'solid-js';
 import './NewLinkButton.css';
@@ -48,7 +48,7 @@ export const NewLinkButton = (props: { sectionId: string }) => {
 
         const newLink: Tlink = {
             id: `Link-${nanoid()}`,
-            name: newLinkName(),
+            name: toTitleCase(newLinkName()),
             url: cleanupUrl(newLinkUrl()),
             description: newLinkDescription().trim(),
         };
