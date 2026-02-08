@@ -4,6 +4,7 @@ import 'solid-devtools';
 
 import App from './App';
 
+import './fonts.css';
 import './index.css';
 
 const root = document.getElementById('root');
