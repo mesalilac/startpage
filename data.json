@@ -119,6 +119,12 @@
                     "description": ""
                 },
                 {
+                    "id": "Link-v2-4iLULZRMWWS9VJfwkd",
+                    "name": "Gsap",
+                    "url": "https://gsap.com/docs/v3",
+                    "description": ""
+                },
+                {
                     "id": "Link-9JQVuBogdqIIUp_1i_78k",
                     "name": "V2 Tauri",
                     "url": "https://v2.tauri.app/",
