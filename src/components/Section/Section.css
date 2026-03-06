@@ -12,10 +12,6 @@
     background-color: var(--color-surface-base);
 
     transition: box-shadow ease-in-out 0.2s;
-
-    &:hover {
-        box-shadow: 0 0 25px 4px rgb(255 255 255 / 5%);
-    }
 }
 
 .section-header-container {
